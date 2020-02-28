@@ -28,20 +28,43 @@ class ViewController: UIViewController {
 
     
     @objc func moveCharacter() {
-        NSLog("Character moved\n")
+       
     }
     
-    @IBAction func upButtonPressed(_ sender: UIButton) {
-        
+    @IBAction func upButtonPressed(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            NSLog("up button pressed\n")
+        }
     }
-    @IBAction func leftButtonPressed(_ sender: UIButton) {
-        
+    
+    @IBAction func rightButtonPressed(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            NSLog("right button pressed\n")
+        }
     }
-    @IBAction func rightButtonPressed(_ sender: UIButton) {
-        
+    
+    @IBAction func downButtonPressed(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            NSLog("down button pressed\n")
+        }
     }
-    @IBAction func downButonPressed(_ sender: UIButton) {
+    @IBAction func leftButtonPressed(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            NSLog("left button pressed\n")
+        }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     
     
     
