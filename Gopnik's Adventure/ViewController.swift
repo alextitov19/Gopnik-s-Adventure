@@ -23,10 +23,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
     }
 
     
-    
+    @objc func moveCharacter() {
+        NSLog("Character moved\n")
+    }
     
     @IBAction func upButtonPressed(_ sender: UIButton) {
         
