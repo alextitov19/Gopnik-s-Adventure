@@ -18,10 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var characterImage: UIImageView!
     
     
-    @IBOutlet var upButton: UIButton!
-    @IBOutlet var leftButton: UIButton!
-    @IBOutlet var rightButton: UIButton!
-    @IBOutlet var downButton: UIButton!
+
     
     
     var rightVelocityMultiplier: Double = 0.0;
@@ -34,10 +31,10 @@ class ViewController: UIViewController {
     var downVelocity: Double = 1.0;
     var characterLocationX: Double = 350.0;
     var characterLocationY: Double = 400.0;
-    var upPressed: Bool = false;
-    var downPressed: Bool = false;
-    var leftPressed: Bool = false;
-    var rightPressed: Bool = false;
+    var upTouchesEnded: Bool = true;
+    var downTouchesEnded: Bool = true;
+    var leftTouchesEnded: Bool = true;
+    var rightTouchesEnded: Bool = true;
 
 
     
@@ -46,75 +43,37 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
-        upButton.addTarget(self, action: #selector(upButtonCalceled), for: UIControl.Event.touchCancel)
-        downButton.addTarget(self, action: #selector(downButtonCalceled), for: UIControl.Event.touchCancel)
-        leftButton.addTarget(self, action: #selector(leftButtonCalceled), for: UIControl.Event.touchCancel)
-        rightButton.addTarget(self, action: #selector(rightButtonCalceled), for: UIControl.Event.touchCancel)
-        upButton.addTarget(self, action: #selector(upButtonPressed), for: UIControl.Event.touchDown)
-        downButton.addTarget(self, action: #selector(downButtonPressed), for: UIControl.Event.touchDown)
-        leftButton.addTarget(self, action: #selector(leftButtonPressed), for: UIControl.Event.touchDown)
-        rightButton.addTarget(self, action: #selector(rightButtonPressed), for: UIControl.Event.touchDown)
 
     }
     
     
-    @objc func upButtonCalceled() {
-        upPressed = false;
-    }
     
-    @objc func downButtonCalceled() {
-        downPressed = false;
-    }
-    
-    @objc func leftButtonCalceled() {
-        leftPressed = false;
-    }
-    
-    @objc func rightButtonCalceled() {
-        rightPressed = false;
-    }
-    
-    @objc func upButtonPressed() {
-        upPressed = true;
-    }
-    
-    @objc func downButtonPressed() {
-        downPressed = true;
-    }
-    
-    @objc func leftButtonPressed() {
-        leftPressed = true;
-    }
-    
-    @objc func rightButtonPressed() {
-        rightPressed = true;
-    }
     
     @objc func moveCharacter() {
         if rightVelocityMultiplier > 0 {
-            rightVelocityMultiplier -= 0.1;
+            rightVelocityMultiplier -= 0.1
         }
         if leftVelocityMultiplier > 0 {
-            leftVelocityMultiplier -= 0.1;
+            leftVelocityMultiplier -= 0.1
         }
         if upVelocityMultiplier > 0 {
-            upVelocityMultiplier -= 0.1;
+            upVelocityMultiplier -= 0.1
         }
         if downVelocityMultiplier > 0 {
-            downVelocityMultiplier -= 0.1;
+            downVelocityMultiplier -= 0.1
         }
         
-        if rightPressed == true {
-            rightVelocityMultiplier  = 2;
+        if upTouchesEnded == false {
+            upVelocityMultiplier = 2
         }
-        if leftPressed == true {
-            leftVelocityMultiplier  = 2;
+        if downTouchesEnded == false {
+            downVelocityMultiplier = 2
         }
-        if upPressed == true {
-            upVelocityMultiplier  = 2;
+        if leftTouchesEnded == false {
+            leftVelocityMultiplier = 2
         }
-        if downPressed == true {
-            downVelocityMultiplier = 2;
+        if rightTouchesEnded == false {
+            rightVelocityMultiplier = 2
         }
         
         characterImage.center = CGPoint(x: characterLocationX + (rightVelocity * rightVelocityMultiplier) - (leftVelocity * leftVelocityMultiplier), y:characterLocationY + (downVelocity * downVelocityMultiplier) - (upVelocity * upVelocityMultiplier))
@@ -125,10 +84,38 @@ class ViewController: UIViewController {
        
     }
     
+    @IBAction func upLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            upTouchesEnded = false
+        } else {
+            upTouchesEnded = true
+        }
+    }
+    
+    @IBAction func rightLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            rightTouchesEnded = false
+        } else {
+            rightTouchesEnded = true
+        }
+    }
+    
+    @IBAction func downLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            downTouchesEnded = false
+        } else {
+            downTouchesEnded = true
+        }
+    }
     
     
-    
-    
+    @IBAction func leftLongPress(_ sender: UILongPressGestureRecognizer) {
+        if sender.state != .ended {
+            leftTouchesEnded = false
+        } else {
+            leftTouchesEnded = true
+        }
+    }
     
 
     

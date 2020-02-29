@@ -43,6 +43,9 @@
                                 <state key="normal" title="Up">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AF1-4V-hRx" appends="YES" id="SMo-TX-NaU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-7V-tbw">
                                 <rect key="frame" x="250" y="774" width="80" height="55"/>
@@ -52,6 +55,9 @@
                                 <state key="normal" title="Right">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vCf-8c-cLN" appends="YES" id="tEb-zb-hjk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-gi-jR3">
                                 <rect key="frame" x="84" y="774" width="80" height="55"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Left">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MTh-gc-QbO" appends="YES" id="fW0-1S-4oG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOl-nH-HoO">
                                 <rect key="frame" x="167" y="830" width="80" height="55"/>
@@ -70,6 +79,9 @@
                                 <state key="normal" title="Down">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tW2-gP-NoU" appends="YES" id="NUr-kT-ycO"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzt-hS-mgo">
                                 <rect key="frame" x="97" y="629" width="23" height="48"/>
@@ -83,16 +95,32 @@
                     <connections>
                         <outlet property="botomWallImage" destination="Z2U-0l-BVf" id="h6h-31-i2B"/>
                         <outlet property="characterImage" destination="dzt-hS-mgo" id="7o1-5m-4T8"/>
-                        <outlet property="downButton" destination="fOl-nH-HoO" id="6hh-he-37I"/>
-                        <outlet property="leftButton" destination="jKg-gi-jR3" id="g5p-Dh-JjU"/>
                         <outlet property="leftWallImage" destination="j0a-bV-WhJ" id="uz1-yp-41U"/>
-                        <outlet property="rightButton" destination="zbK-7V-tbw" id="R3s-jZ-oVg"/>
                         <outlet property="rightWallImage" destination="hYF-Dn-6dY" id="crx-yc-vFc"/>
                         <outlet property="topWallImage" destination="oHb-Ko-ZIc" id="1Pg-HO-hz9"/>
-                        <outlet property="upButton" destination="ceG-l5-p6E" id="KmZ-7w-x65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="AF1-4V-hRx">
+                    <connections>
+                        <action selector="upLongPress:" destination="BYZ-38-t0r" id="MT6-GR-iFF"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vCf-8c-cLN">
+                    <connections>
+                        <action selector="rightLongPress:" destination="BYZ-38-t0r" id="DQX-jg-tEa"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tW2-gP-NoU">
+                    <connections>
+                        <action selector="downLongPress:" destination="BYZ-38-t0r" id="HpI-tK-hN8"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="MTh-gc-QbO">
+                    <connections>
+                        <action selector="leftLongPress:" destination="BYZ-38-t0r" id="0bo-el-gMg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </scene>
