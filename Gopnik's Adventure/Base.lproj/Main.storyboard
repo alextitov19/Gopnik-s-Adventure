@@ -101,22 +101,22 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="AF1-4V-hRx">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="AF1-4V-hRx">
                     <connections>
                         <action selector="upLongPress:" destination="BYZ-38-t0r" id="MT6-GR-iFF"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vCf-8c-cLN">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="vCf-8c-cLN">
                     <connections>
                         <action selector="rightLongPress:" destination="BYZ-38-t0r" id="DQX-jg-tEa"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tW2-gP-NoU">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="tW2-gP-NoU">
                     <connections>
                         <action selector="downLongPress:" destination="BYZ-38-t0r" id="HpI-tK-hN8"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="MTh-gc-QbO">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="MTh-gc-QbO">
                     <connections>
                         <action selector="leftLongPress:" destination="BYZ-38-t0r" id="0bo-el-gMg"/>
                     </connections>
