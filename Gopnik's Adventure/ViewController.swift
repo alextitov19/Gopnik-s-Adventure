@@ -87,8 +87,14 @@ class ViewController: UIViewController {
     }
     
     
-    func getCorners(centerX: Int, centerY: Int, height: Int, width: Int) -> [[Int]] {
-        return [[centerX + (width/2), centerY - (height/2)], [centerX + (width/2), centerY + (height/2)], [centerX - (width/2), centerY - (height/2)], [centerX - (width/2), centerY + (height/2)]]
+    func addBorders(rectangle: CGRect, boundaries: UICollisionBehavior) {
+        boundaries.addBoundary(withIdentifier: NSString("left"), from: rectangle.origin, to: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height))
+        
+        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height))
+        
+        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y))
+        
+        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y), to: rectangle.origin)
     }
     
     
