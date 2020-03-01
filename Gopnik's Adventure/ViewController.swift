@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var characterImage: UIImageView!
     
-    
+    var animator: UIDynamicAnimator?
 
     
     
@@ -43,7 +43,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
-
+        animator = UIDynamicAnimator(referenceView: self.view)
+        
+        let boundaries = UICollisionBehavior(items: [characterImage])
+        
     }
     
     
@@ -80,9 +83,21 @@ class ViewController: UIViewController {
         
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-
        
     }
+    
+    
+    func getCorners(centerX: Int, centerY: Int, height: Int, width: Int) -> [[Int]] {
+        return [[centerX + (width/2), centerY - (height/2)], [centerX + (width/2), centerY + (height/2)], [centerX - (width/2), centerY - (height/2)], [centerX - (width/2), centerY + (height/2)]]
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func upLongPress(_ sender: UILongPressGestureRecognizer) {
         if sender.state != .ended {
