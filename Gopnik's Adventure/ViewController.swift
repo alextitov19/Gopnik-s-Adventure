@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var botomWallImage: UIImageView!
+    @IBOutlet var bottomWallImage: UIImageView!
     @IBOutlet var topWallImage: UIImageView!
     @IBOutlet var leftWallImage: UIImageView!
     @IBOutlet var rightWallImage: UIImageView!
@@ -43,10 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
-        animator = UIDynamicAnimator(referenceView: self.view)
-        
-        let boundaries = UICollisionBehavior(items: [characterImage])
-        
+8
     }
     
     
@@ -79,6 +76,20 @@ class ViewController: UIViewController {
             rightVelocityMultiplier = 2
         }
         
+        if characterImage.frame.intersects(leftWallImage.frame) {
+            leftVelocityMultiplier = 0
+        }
+        if characterImage.frame.intersects(rightWallImage.frame) {
+            rightVelocityMultiplier = 0
+        }
+        if characterImage.frame.intersects(topWallImage.frame) {
+            upVelocityMultiplier = 0
+        }
+        if characterImage.frame.intersects(bottomWallImage.frame) {
+            downVelocityMultiplier = 0
+        }
+        
+        
         characterImage.center = CGPoint(x: characterLocationX + (rightVelocity * rightVelocityMultiplier) - (leftVelocity * leftVelocityMultiplier), y:characterLocationY + (downVelocity * downVelocityMultiplier) - (upVelocity * upVelocityMultiplier))
         
         characterLocationX = Double(characterImage.center.x)
@@ -87,15 +98,15 @@ class ViewController: UIViewController {
     }
     
     
-    func addBorders(rectangle: CGRect, boundaries: UICollisionBehavior) {
-        boundaries.addBoundary(withIdentifier: NSString("left"), from: rectangle.origin, to: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height))
-        
-        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height))
-        
-        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y))
-        
-        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y), to: rectangle.origin)
-    }
+//    func addBorders(rectangle: CGRect, boundaries: UICollisionBehavior) {
+//        boundaries.addBoundary(withIdentifier: NSString("left"), from: rectangle.origin, to: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height))
+//
+//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height))
+//
+//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y))
+//
+//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y), to: rectangle.origin)
+//    }
     
     
     
