@@ -25,10 +25,10 @@ class ViewController: UIViewController {
     var leftVelocityMultiplier: Double = 0.0;
     var upVelocityMultiplier: Double = 0.0;
     var downVelocityMultiplier: Double = 0.0;
-    var rightVelocity: Double = 1.0;
-    var leftVelocity: Double = 1.0;
-    var upVelocity: Double = 1.0;
-    var downVelocity: Double = 1.0;
+    var rightVelocity: Double = 0.1;
+    var leftVelocity: Double = 0.1;
+    var upVelocity: Double = 0.1;
+    var downVelocity: Double = 0.1;
     var characterLocationX: Double = 350.0;
     var characterLocationY: Double = 400.0;
     var upTouchesEnded: Bool = true;
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
 8
     }
     
@@ -57,17 +57,15 @@ class ViewController: UIViewController {
             leftVelocityMultiplier -= 0.1
         }
         if upVelocityMultiplier > 0 {
-            upVelocityMultiplier -= 0.1
+            upVelocityMultiplier -= 0.01
         }
-        if downVelocityMultiplier > 0 {
-            downVelocityMultiplier -= 0.1
+        if upVelocityMultiplier < 0 {
+            upVelocityMultiplier = 0
         }
         
         if upTouchesEnded == false {
-            upVelocityMultiplier = 2
-        }
-        if downTouchesEnded == false {
-            downVelocityMultiplier = 2
+            upVelocityMultiplier = 3
+            downVelocityMultiplier = 0
         }
         if leftTouchesEnded == false {
             leftVelocityMultiplier = 2
@@ -87,6 +85,8 @@ class ViewController: UIViewController {
         }
         if characterImage.frame.intersects(bottomWallImage.frame) {
             downVelocityMultiplier = 0
+        } else {
+            downVelocityMultiplier += 0.01
         }
         
         
