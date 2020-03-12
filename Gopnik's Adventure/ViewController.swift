@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet var topWallImage: UIImageView!
     @IBOutlet var leftWallImage: UIImageView!
     @IBOutlet var rightWallImage: UIImageView!
+    @IBOutlet var I1TopImage: UIImageView!
+    @IBOutlet var I1BottomImage: UIImageView!
+    @IBOutlet var I1LeftImage: UIImageView!
+    
+    
+    
+    
     
     @IBOutlet var characterImage: UIImageView!
     
@@ -29,8 +36,8 @@ class ViewController: UIViewController {
     var leftVelocity: Double = 0.1;
     var upVelocity: Double = 0.1;
     var downVelocity: Double = 0.1;
-    var characterLocationX: Double = 350.0;
-    var characterLocationY: Double = 400.0;
+    var characterLocationX: Double = 40.0;
+    var characterLocationY: Double = 663.0;
     var upTouchesEnded: Bool = true;
     var downTouchesEnded: Bool = true;
     var leftTouchesEnded: Bool = true;
@@ -43,7 +50,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
-8
     }
     
     
@@ -77,13 +83,13 @@ class ViewController: UIViewController {
         if characterImage.frame.intersects(leftWallImage.frame) {
             leftVelocityMultiplier = 0
         }
-        if characterImage.frame.intersects(rightWallImage.frame) {
+        if (characterImage.frame.intersects(rightWallImage.frame) || characterImage.frame.intersects(I1LeftImage.frame)) {
             rightVelocityMultiplier = 0
         }
-        if characterImage.frame.intersects(topWallImage.frame) {
+        if (characterImage.frame.intersects(topWallImage.frame) || characterImage.frame.intersects(I1BottomImage.frame)) {
             upVelocityMultiplier = 0
         }
-        if characterImage.frame.intersects(bottomWallImage.frame) {
+        if (characterImage.frame.intersects(bottomWallImage.frame) || characterImage.frame.intersects(I1TopImage.frame)) {
             downVelocityMultiplier = 0
         } else {
             downVelocityMultiplier += 0.01
@@ -97,16 +103,7 @@ class ViewController: UIViewController {
        
     }
     
-    
-//    func addBorders(rectangle: CGRect, boundaries: UICollisionBehavior) {
-//        boundaries.addBoundary(withIdentifier: NSString("left"), from: rectangle.origin, to: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height))
-//
-//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height))
-//
-//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y - rectangle.size.height), to: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y))
-//
-//        boundaries.addBoundary(withIdentifier: NSString("left"), from: CGPoint(x: rectangle.origin.x + rectangle.size.width, y: rectangle.origin.y), to: rectangle.origin)
-//    }
+
     
     
     
