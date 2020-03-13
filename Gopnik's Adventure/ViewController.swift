@@ -9,18 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //borders
     @IBOutlet var bottomWallImage: UIImageView!
     @IBOutlet var topWallImage: UIImageView!
     @IBOutlet var leftWallImage: UIImageView!
     @IBOutlet var rightWallImage: UIImageView!
+    //I1
     @IBOutlet var I1TopImage: UIImageView!
     @IBOutlet var I1BottomImage: UIImageView!
     @IBOutlet var I1LeftImage: UIImageView!
-    
-    
-    
-    
+    //I2
+    @IBOutlet var I2TopImage: UIImageView!
+    @IBOutlet var I2RightImage: UIImageView!
+    @IBOutlet var I2BottomImage: UIImageView!
+    //I3
+    @IBOutlet var I3TopImage: UIImageView!
+    @IBOutlet var I3LeftImage: UIImageView!
+    @IBOutlet var I3BottomImage: UIImageView!
     
     @IBOutlet var characterImage: UIImageView!
     
@@ -79,17 +84,20 @@ class ViewController: UIViewController {
         if rightTouchesEnded == false {
             rightVelocityMultiplier = 2
         }
-        
-        if characterImage.frame.intersects(leftWallImage.frame) {
+        //left border hit
+        if (characterImage.frame.intersects(leftWallImage.frame) || characterImage.frame.intersects(I2RightImage.frame)){
             leftVelocityMultiplier = 0
         }
-        if (characterImage.frame.intersects(rightWallImage.frame) || characterImage.frame.intersects(I1LeftImage.frame)) {
+        //right border hit
+        if (characterImage.frame.intersects(rightWallImage.frame) || characterImage.frame.intersects(I1LeftImage.frame) || characterImage.frame.intersects(I3LeftImage.frame)) {
             rightVelocityMultiplier = 0
         }
-        if (characterImage.frame.intersects(topWallImage.frame) || characterImage.frame.intersects(I1BottomImage.frame)) {
+        //bottom border hit
+        if (characterImage.frame.intersects(topWallImage.frame) || characterImage.frame.intersects(I1BottomImage.frame) || characterImage.frame.intersects(I2BottomImage.frame) || characterImage.frame.intersects(I3BottomImage.frame)) {
             upVelocityMultiplier = 0
         }
-        if (characterImage.frame.intersects(bottomWallImage.frame) || characterImage.frame.intersects(I1TopImage.frame)) {
+        //top border hit
+        if (characterImage.frame.intersects(bottomWallImage.frame) || characterImage.frame.intersects(I1TopImage.frame) || characterImage.frame.intersects(I2TopImage.frame) || characterImage.frame.intersects(I3TopImage.frame)) {
             downVelocityMultiplier = 0
         } else {
             downVelocityMultiplier += 0.01
