@@ -79,11 +79,6 @@ class ViewController: UIViewController {
     @IBOutlet var I16LeftImage: UIImageView!
     @IBOutlet var I16BottomImage: UIImageView!
     
-    
-    
-    
-    
-    
     @IBOutlet var characterImage: UIImageView!
     
     var animator: UIDynamicAnimator?
@@ -142,19 +137,19 @@ class ViewController: UIViewController {
             rightVelocityMultiplier = 2
         }
         //left border hit
-        if (characterImage.frame.intersects(leftWallImage.frame) || characterImage.frame.intersects(I2RightImage.frame)){
+        if (characterImage.frame.intersects(leftWallImage.frame) || characterImage.frame.intersects(I2RightImage.frame) || characterImage.frame.intersects(I5RightImage.frame) || characterImage.frame.intersects(I7RightImage.frame) || characterImage.frame.intersects(I8RightImage.frame) || characterImage.frame.intersects(I11RightImage.frame) || characterImage.frame.intersects(I13RightImage.frame) || characterImage.frame.intersects(I14RightImage.frame)){
             leftVelocityMultiplier = 0
         }
         //right border hit
-        if (characterImage.frame.intersects(rightWallImage.frame) || characterImage.frame.intersects(I1LeftImage.frame) || characterImage.frame.intersects(I3LeftImage.frame)) {
+        if (characterImage.frame.intersects(rightWallImage.frame) || characterImage.frame.intersects(I1LeftImage.frame) || characterImage.frame.intersects(I3LeftImage.frame) || characterImage.frame.intersects(I4LeftImage.frame) || characterImage.frame.intersects(I6LeftImage.frame) || characterImage.frame.intersects(I9LeftImage.frame) || characterImage.frame.intersects(I10LeftImage.frame) || characterImage.frame.intersects(I12LeftImage.frame) || characterImage.frame.intersects(I15LeftImage.frame) || characterImage.frame.intersects(I16LeftImage.frame)) {
             rightVelocityMultiplier = 0
         }
         //bottom border hit
-        if (characterImage.frame.intersects(topWallImage.frame) || characterImage.frame.intersects(I1BottomImage.frame) || characterImage.frame.intersects(I2BottomImage.frame) || characterImage.frame.intersects(I3BottomImage.frame)) {
+        if (characterImage.frame.intersects(topWallImage.frame) || characterImage.frame.intersects(I1BottomImage.frame) || characterImage.frame.intersects(I2BottomImage.frame) || characterImage.frame.intersects(I3BottomImage.frame) || characterImage.frame.intersects(I4BottomImage.frame) || characterImage.frame.intersects(I5BottomImage.frame) || characterImage.frame.intersects(I6BottomImage.frame) || characterImage.frame.intersects(I7BottomImage.frame) || characterImage.frame.intersects(I8BottomImage.frame) || characterImage.frame.intersects(I9BottomImage.frame) || characterImage.frame.intersects(I10BottomImage.frame) || characterImage.frame.intersects(I11BottomImage.frame) || characterImage.frame.intersects(I12BottomImage.frame) || characterImage.frame.intersects(I13BottomImage.frame) || characterImage.frame.intersects(I14BottomImage.frame) || characterImage.frame.intersects(I15BottomImage.frame) || characterImage.frame.intersects(I16BottomImage.frame)) {
             upVelocityMultiplier = 0
         }
         //top border hit
-        if (characterImage.frame.intersects(bottomWallImage.frame) || characterImage.frame.intersects(I1TopImage.frame) || characterImage.frame.intersects(I2TopImage.frame) || characterImage.frame.intersects(I3TopImage.frame)) {
+        if (characterImage.frame.intersects(bottomWallImage.frame) || characterImage.frame.intersects(I1TopImage.frame) || characterImage.frame.intersects(I2TopImage.frame) || characterImage.frame.intersects(I3TopImage.frame) || characterImage.frame.intersects(I4TopImage.frame) || characterImage.frame.intersects(I5TopImage.frame) || characterImage.frame.intersects(I6TopImage.frame) || characterImage.frame.intersects(I7TopImage.frame) || characterImage.frame.intersects(I8TopImage.frame) || characterImage.frame.intersects(I9TopImage.frame) || characterImage.frame.intersects(I10TopImage.frame) || characterImage.frame.intersects(I11TopImage.frame) || characterImage.frame.intersects(I12TopImage.frame) || characterImage.frame.intersects(I13TopImage.frame) || characterImage.frame.intersects(I14TopImage.frame) || characterImage.frame.intersects(I15TopImage.frame) || characterImage.frame.intersects(I16TopImage.frame)) {
             downVelocityMultiplier = 0
         } else {
             downVelocityMultiplier += 0.01
