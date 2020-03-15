@@ -413,7 +413,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="I10BottomImage" destination="8bC-Xf-vdC" id="3Ef-0I-iLx"/>
+                        <outlet property="I10BottomImage" destination="12r-Xn-tat" id="umc-ht-lgc"/>
                         <outlet property="I10LeftImage" destination="NUz-fu-9f3" id="Hpj-Xi-kbe"/>
                         <outlet property="I10TopImage" destination="k85-VJ-bL1" id="BC5-zL-sHT"/>
                         <outlet property="I11BottomImage" destination="QzD-kr-q8t" id="WDF-bL-5UN"/>
