@@ -244,7 +244,7 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyN-IS-VqZ">
-                                <rect key="frame" x="136" y="398" width="263" height="3"/>
+                                <rect key="frame" x="135" y="398" width="264" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -413,6 +413,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="I10BottomImage" destination="8bC-Xf-vdC" id="3Ef-0I-iLx"/>
+                        <outlet property="I10LeftImage" destination="NUz-fu-9f3" id="Hpj-Xi-kbe"/>
+                        <outlet property="I10TopImage" destination="k85-VJ-bL1" id="BC5-zL-sHT"/>
+                        <outlet property="I11BottomImage" destination="QzD-kr-q8t" id="WDF-bL-5UN"/>
+                        <outlet property="I11RightImage" destination="2uj-Le-KJe" id="RAD-iJ-Hbb"/>
+                        <outlet property="I11TopImage" destination="8T8-fY-F9T" id="92Q-7b-rr7"/>
+                        <outlet property="I12BottomImage" destination="fTv-eV-FUL" id="qvL-0A-4j1"/>
+                        <outlet property="I12LeftImage" destination="bfL-ah-FZz" id="xMe-Gt-MoK"/>
+                        <outlet property="I12TopImage" destination="Lnl-xd-sB6" id="l5F-K4-CLD"/>
+                        <outlet property="I13BottomImage" destination="Ypt-Gt-tEy" id="9Dt-sJ-jcN"/>
+                        <outlet property="I13RightImage" destination="AlO-J9-obS" id="8VO-tA-afa"/>
+                        <outlet property="I13TopImage" destination="hGH-IB-fbb" id="FpH-7w-v6W"/>
+                        <outlet property="I14BottomImage" destination="CK9-On-OaB" id="ciw-2Q-etL"/>
+                        <outlet property="I14RightImage" destination="Vph-Qp-JF0" id="WOA-bp-W5l"/>
+                        <outlet property="I14TopImage" destination="0S2-vc-qWz" id="GqC-JJ-wj0"/>
+                        <outlet property="I15BottomImage" destination="Jmv-aX-3oa" id="wNE-ca-Gh2"/>
+                        <outlet property="I15LeftImage" destination="rvN-yf-ByO" id="YWS-Wl-mYg"/>
+                        <outlet property="I15TopImage" destination="iXn-0V-Blp" id="Fk7-eF-4Rm"/>
+                        <outlet property="I16BottomImage" destination="3rj-TU-DnS" id="eNf-g2-EzY"/>
+                        <outlet property="I16LeftImage" destination="81V-hQ-Zal" id="1tw-T7-0w9"/>
+                        <outlet property="I16TopImage" destination="Ysr-OG-tDo" id="XJc-VK-pFv"/>
                         <outlet property="I1BottomImage" destination="3te-RD-JEV" id="BW1-Ez-S3z"/>
                         <outlet property="I1LeftImage" destination="F8F-v8-pMt" id="9u5-79-7LR"/>
                         <outlet property="I1TopImage" destination="hmB-o6-n6M" id="mX1-ur-8IM"/>
@@ -422,6 +443,24 @@
                         <outlet property="I3BottomImage" destination="3RS-jt-dC6" id="XnJ-YP-yMW"/>
                         <outlet property="I3LeftImage" destination="0lB-x7-AJo" id="4cA-As-9I3"/>
                         <outlet property="I3TopImage" destination="L3b-SK-6Gz" id="pH8-t1-892"/>
+                        <outlet property="I4BottomImage" destination="4Nc-X3-BIb" id="SmI-rl-jtY"/>
+                        <outlet property="I4LeftImage" destination="eqJ-PT-YKm" id="cYv-NT-zMG"/>
+                        <outlet property="I4TopImage" destination="9zr-R7-S0l" id="jzm-iF-wYB"/>
+                        <outlet property="I5BottomImage" destination="Ueg-sQ-pwS" id="LY8-Ge-kmA"/>
+                        <outlet property="I5RightImage" destination="FGW-22-7u7" id="oCU-Xi-14C"/>
+                        <outlet property="I5TopImage" destination="POE-vC-E6A" id="gmX-ze-Fyw"/>
+                        <outlet property="I6BottomImage" destination="AaB-8Z-dpc" id="foh-sk-yec"/>
+                        <outlet property="I6LeftImage" destination="cRg-Nq-ag5" id="QcA-eD-Kiv"/>
+                        <outlet property="I6TopImage" destination="4FC-6x-FwN" id="h9A-IB-saf"/>
+                        <outlet property="I7BottomImage" destination="AfS-Kq-FlM" id="gZP-5I-GDg"/>
+                        <outlet property="I7RightImage" destination="pxk-20-BVi" id="QMz-w1-dpW"/>
+                        <outlet property="I7TopImage" destination="jaL-Pe-AOC" id="mls-II-ua6"/>
+                        <outlet property="I8BottomImage" destination="eHA-kM-vFr" id="6Na-uV-3zU"/>
+                        <outlet property="I8RightImage" destination="fmw-W9-ZV9" id="b9l-l8-v7d"/>
+                        <outlet property="I8TopImage" destination="UtS-G4-aiM" id="f7R-25-Ru1"/>
+                        <outlet property="I9BottomImage" destination="eyN-IS-VqZ" id="Qyr-j5-4Dr"/>
+                        <outlet property="I9LeftImage" destination="TPh-ju-YVp" id="r4E-VT-ker"/>
+                        <outlet property="I9TopImage" destination="D3r-8V-s51" id="3qN-Zq-4ab"/>
                         <outlet property="bottomWallImage" destination="Z2U-0l-BVf" id="h6h-31-i2B"/>
                         <outlet property="characterImage" destination="dzt-hS-mgo" id="7o1-5m-4T8"/>
                         <outlet property="leftWallImage" destination="j0a-bV-WhJ" id="uz1-yp-41U"/>

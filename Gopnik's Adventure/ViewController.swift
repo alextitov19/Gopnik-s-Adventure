@@ -26,6 +26,63 @@ class ViewController: UIViewController {
     @IBOutlet var I3TopImage: UIImageView!
     @IBOutlet var I3LeftImage: UIImageView!
     @IBOutlet var I3BottomImage: UIImageView!
+    //I4
+    @IBOutlet var I4LeftImage: UIImageView!
+    @IBOutlet var I4TopImage: UIImageView!
+    @IBOutlet var I4BottomImage: UIImageView!
+    //I5
+    @IBOutlet var I5TopImage: UIImageView!
+    @IBOutlet var I5RightImage: UIImageView!
+    @IBOutlet var I5BottomImage: UIImageView!
+    //I6
+    @IBOutlet var I6TopImage: UIImageView!
+    @IBOutlet var I6LeftImage: UIImageView!
+    @IBOutlet var I6BottomImage: UIImageView!
+    //I7
+    @IBOutlet var I7TopImage: UIImageView!
+    @IBOutlet var I7RightImage: UIImageView!
+    @IBOutlet var I7BottomImage: UIImageView!
+    //I8
+    @IBOutlet var I8TopImage: UIImageView!
+    @IBOutlet var I8RightImage: UIImageView!
+    @IBOutlet var I8BottomImage: UIImageView!
+    //I9
+    @IBOutlet var I9TopImage: UIImageView!
+    @IBOutlet var I9LeftImage: UIImageView!
+    @IBOutlet var I9BottomImage: UIImageView!
+    //I10
+    @IBOutlet var I10LeftImage: UIImageView!
+    @IBOutlet var I10TopImage: UIImageView!
+    @IBOutlet var I10BottomImage: UIView!
+    //I11
+    @IBOutlet var I11TopImage: UIImageView!
+    @IBOutlet var I11RightImage: UIImageView!
+    @IBOutlet var I11BottomImage: UIImageView!
+    //I12
+    @IBOutlet var I12TopImage: UIImageView!
+    @IBOutlet var I12LeftImage: UIImageView!
+    @IBOutlet var I12BottomImage: UIImageView!
+    //I13
+    @IBOutlet var I13TopImage: UIImageView!
+    @IBOutlet var I13RightImage: UIImageView!
+    @IBOutlet var I13BottomImage: UIImageView!
+    //I14
+    @IBOutlet var I14TopImage: UIImageView!
+    @IBOutlet var I14RightImage: UIImageView!
+    @IBOutlet var I14BottomImage: UIImageView!
+    //I15
+    @IBOutlet var I15TopImage: UIImageView!
+    @IBOutlet var I15LeftImage: UIImageView!
+    @IBOutlet var I15BottomImage: UIImageView!
+    //I16
+    @IBOutlet var I16TopImage: UIImageView!
+    @IBOutlet var I16LeftImage: UIImageView!
+    @IBOutlet var I16BottomImage: UIImageView!
+    
+    
+    
+    
+    
     
     @IBOutlet var characterImage: UIImageView!
     
