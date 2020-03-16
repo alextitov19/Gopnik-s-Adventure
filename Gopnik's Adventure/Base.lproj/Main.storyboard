@@ -44,7 +44,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AF1-4V-hRx" appends="YES" id="SMo-TX-NaU"/>
+                                    <action selector="upButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ef0-VZ-1td"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-7V-tbw">
@@ -334,7 +334,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-Gt-tEy">
-                                <rect key="frame" x="14" y="229" width="357" height="3"/>
+                                <rect key="frame" x="16" y="229" width="355" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -469,11 +469,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="AF1-4V-hRx">
-                    <connections>
-                        <action selector="upLongPress:" destination="BYZ-38-t0r" id="MT6-GR-iFF"/>
-                    </connections>
-                </pongPressGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="vCf-8c-cLN">
                     <connections>
                         <action selector="rightLongPress:" destination="BYZ-38-t0r" id="DQX-jg-tEa"/>

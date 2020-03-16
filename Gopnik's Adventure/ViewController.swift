@@ -95,7 +95,6 @@ class ViewController: UIViewController {
     var downVelocity: Double = 0.1;
     var characterLocationX: Double = 40.0;
     var characterLocationY: Double = 663.0;
-    var upTouchesEnded: Bool = true;
     var downTouchesEnded: Bool = true;
     var leftTouchesEnded: Bool = true;
     var rightTouchesEnded: Bool = true;
@@ -126,10 +125,7 @@ class ViewController: UIViewController {
             upVelocityMultiplier = 0
         }
         
-        if upTouchesEnded == false {
-            upVelocityMultiplier = 3
-            downVelocityMultiplier = 0
-        }
+
         if leftTouchesEnded == false {
             leftVelocityMultiplier = 2
         }
@@ -170,15 +166,8 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    
-    @IBAction func upLongPress(_ sender: UILongPressGestureRecognizer) {
-        if sender.state != .ended {
-            upTouchesEnded = false
-        } else {
-            upTouchesEnded = true
-        }
+    @IBAction func upButtonTapped(_ sender: UIButton) {
+        upVelocityMultiplier = 5
     }
     
     @IBAction func rightLongPress(_ sender: UILongPressGestureRecognizer) {
