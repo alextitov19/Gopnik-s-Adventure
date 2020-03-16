@@ -110,16 +110,16 @@ class ViewController: UIViewController {
     var rightTouchesEnded: Bool = true
 
     //bot  ovement attributes
-    var b1velocity: Double = 0.5
-    var b2velocity: Double = 0.5
-    var b3velocity: Double = 0.5
-    var b4velocity: Double = 0.5
-    var b5velocity: Double = 0.5
-    var b6velocity: Double = 0.5
-    var b7velocity: Double = 0.5
-    var b8velocity: Double = 0.5
-    var b9velocity: Double = 0.5
-    var b10velocity: Double = 0.5
+    var b1velocity: Double = 0.05
+    var b2velocity: Double = 0.05
+    var b3velocity: Double = 0.05
+    var b4velocity: Double = 0.05
+    var b5velocity: Double = 0.05
+    var b6velocity: Double = 0.05
+    var b7velocity: Double = 0.05
+    var b8velocity: Double = 0.05
+    var b9velocity: Double = 0.05
+    var b10velocity: Double = 0.05
     
     
     override func viewDidLoad() {
@@ -178,6 +178,50 @@ class ViewController: UIViewController {
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
        //bot logic
+        bot1Image.center = CGPoint(x: bot1Image.center.x + CGFloat(b1velocity), y: bot1Image.center.y)
+        bot2Image.center = CGPoint(x: bot2Image.center.x + CGFloat(b2velocity), y: bot2Image.center.y)
+        bot3Image.center = CGPoint(x: bot3Image.center.x + CGFloat(b3velocity), y: bot3Image.center.y)
+        bot4Image.center = CGPoint(x: bot4Image.center.x + CGFloat(b4velocity), y: bot4Image.center.y)
+        bot5Image.center = CGPoint(x: bot5Image.center.x + CGFloat(b5velocity), y: bot5Image.center.y)
+        bot6Image.center = CGPoint(x: bot6Image.center.x + CGFloat(b6velocity), y: bot6Image.center.y)
+        bot7Image.center = CGPoint(x: bot7Image.center.x + CGFloat(b7velocity), y: bot7Image.center.y)
+        bot8Image.center = CGPoint(x: bot8Image.center.x + CGFloat(b8velocity), y: bot8Image.center.y)
+        bot9Image.center = CGPoint(x: bot9Image.center.x + CGFloat(b9velocity), y: bot9Image.center.y)
+        bot10Image.center = CGPoint(x: bot10Image.center.x + CGFloat(b10velocity), y: bot10Image.center.y)
+        
+        
+        if bot1Image.frame.intersects(leftWallImage.frame) || bot1Image.frame.intersects(rightWallImage.frame) {
+            b1velocity *= -1
+        }
+        if bot2Image.frame.intersects(leftWallImage.frame) || bot2Image.frame.intersects(rightWallImage.frame) {
+            b2velocity *= -1
+        }
+        if bot3Image.frame.intersects(leftWallImage.frame) || bot3Image.frame.intersects(rightWallImage.frame) {
+            b3velocity *= -1
+        }
+        if bot4Image.frame.intersects(leftWallImage.frame) || bot4Image.frame.intersects(rightWallImage.frame) {
+            b4velocity *= -1
+        }
+        if bot5Image.frame.intersects(leftWallImage.frame) || bot5Image.frame.intersects(rightWallImage.frame) {
+            b5velocity *= -1
+        }
+        if bot6Image.frame.intersects(leftWallImage.frame) || bot6Image.frame.intersects(rightWallImage.frame) {
+            b6velocity *= -1
+        }
+        if bot7Image.frame.intersects(leftWallImage.frame) || bot7Image.frame.intersects(rightWallImage.frame) {
+            b7velocity *= -1
+        }
+        if bot8Image.frame.intersects(leftWallImage.frame) || bot8Image.frame.intersects(rightWallImage.frame) {
+            b8velocity *= -1
+        }
+        if bot9Image.frame.intersects(leftWallImage.frame) || bot9Image.frame.intersects(rightWallImage.frame) {
+            b9velocity *= -1
+        }
+        if bot10Image.frame.intersects(leftWallImage.frame) || bot10Image.frame.intersects(rightWallImage.frame) {
+            b10velocity *= -1
+        }
+
+        
     }
     
 
