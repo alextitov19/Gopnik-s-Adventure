@@ -78,40 +78,61 @@ class ViewController: UIViewController {
     @IBOutlet var I16TopImage: UIImageView!
     @IBOutlet var I16LeftImage: UIImageView!
     @IBOutlet var I16BottomImage: UIImageView!
-    
+    //character image
     @IBOutlet var characterImage: UIImageView!
+    //bots
+    @IBOutlet var bot1Image: UIImageView!
+    @IBOutlet var bot2Image: UIImageView!
+    @IBOutlet var bot3Image: UIImageView!
+    @IBOutlet var bot4Image: UIImageView!
+    @IBOutlet var bot5Image: UIImageView!
+    @IBOutlet var bot6Image: UIImageView!
+    @IBOutlet var bot7Image: UIImageView!
+    @IBOutlet var bot8Image: UIImageView!
+    @IBOutlet var bot9Image: UIImageView!
+    @IBOutlet var bot10Image: UIImageView!
     
-    var animator: UIDynamicAnimator?
 
     
-    
-    var rightVelocityMultiplier: Double = 0.0;
-    var leftVelocityMultiplier: Double = 0.0;
-    var upVelocityMultiplier: Double = 0.0;
-    var downVelocityMultiplier: Double = 0.0;
-    var rightVelocity: Double = 0.1;
-    var leftVelocity: Double = 0.1;
-    var upVelocity: Double = 0.1;
-    var downVelocity: Double = 0.1;
-    var characterLocationX: Double = 40.0;
-    var characterLocationY: Double = 663.0;
-    var downTouchesEnded: Bool = true;
-    var leftTouchesEnded: Bool = true;
-    var rightTouchesEnded: Bool = true;
+    //character movement attributes
+    var rightVelocityMultiplier: Double = 0.0
+    var leftVelocityMultiplier: Double = 0.0
+    var upVelocityMultiplier: Double = 0.0
+    var downVelocityMultiplier: Double = 0.0
+    var rightVelocity: Double = 0.1
+    var leftVelocity: Double = 0.1
+    var upVelocity: Double = 0.1
+    var downVelocity: Double = 0.1
+    var characterLocationX: Double = 40.0
+    var characterLocationY: Double = 663.0
+    var downTouchesEnded: Bool = true
+    var leftTouchesEnded: Bool = true
+    var rightTouchesEnded: Bool = true
 
-
+    //bot  ovement attributes
+    var b1velocity: Double = 0.5
+    var b2velocity: Double = 0.5
+    var b3velocity: Double = 0.5
+    var b4velocity: Double = 0.5
+    var b5velocity: Double = 0.5
+    var b6velocity: Double = 0.5
+    var b7velocity: Double = 0.5
+    var b8velocity: Double = 0.5
+    var b9velocity: Double = 0.5
+    var b10velocity: Double = 0.5
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(moveCharacter), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
     }
     
     
     
     
-    @objc func moveCharacter() {
+    @objc func selector() {
+        //character logic
         if rightVelocityMultiplier > 0 {
             rightVelocityMultiplier -= 0.1
         }
@@ -156,7 +177,7 @@ class ViewController: UIViewController {
         
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-       
+       //bot logic
     }
     
 
