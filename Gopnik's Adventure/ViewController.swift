@@ -91,9 +91,8 @@ class ViewController: UIViewController {
     @IBOutlet var bot8Image: UIImageView!
     @IBOutlet var bot9Image: UIImageView!
     @IBOutlet var bot10Image: UIImageView!
-    
-
-    
+    //bullets
+    @IBOutlet var bullet1Image: UIImageView!
     //character movement attributes
     var rightVelocityMultiplier: Double = 0.0
     var leftVelocityMultiplier: Double = 0.0
@@ -108,8 +107,7 @@ class ViewController: UIViewController {
     var downTouchesEnded: Bool = true
     var leftTouchesEnded: Bool = true
     var rightTouchesEnded: Bool = true
-
-    //bot  ovement attributes
+    //bot attributes
     var b1velocity: Double = 0.05
     var b2velocity: Double = 0.05
     var b3velocity: Double = 0.05
@@ -120,6 +118,12 @@ class ViewController: UIViewController {
     var b8velocity: Double = 0.05
     var b9velocity: Double = 0.05
     var b10velocity: Double = 0.05
+    //bullet attributes
+    var bulletVelocity: Double = 0.5
+    var bullet1IsInAction: Bool = false
+    var bullet1Direction: Int = 1    //left = -1, right = 1
+    var bullet1Y: Double = 600
+    var bullet1X: Double = 300
     
     
     override func viewDidLoad() {
@@ -221,6 +225,15 @@ class ViewController: UIViewController {
             b10velocity *= -1
         }
 
+        if bullet1IsInAction == true {
+            bullet1Image.isHidden = false
+            bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
+            bullet1X = Double(bullet1Image.center.x)
+            bullet1Y = Double(bullet1Image.center.y)
+
+        } else {
+            bullet1Image.isHidden = true
+        }
         
     }
     
@@ -236,6 +249,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightLongPress(_ sender: UILongPressGestureRecognizer) {
+        bullet1Direction = 1
         if sender.state != .ended {
             rightTouchesEnded = false
         } else {
@@ -253,6 +267,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func leftLongPress(_ sender: UILongPressGestureRecognizer) {
+        bullet1Direction = -1
         if sender.state != .ended {
             leftTouchesEnded = false
         } else {
@@ -260,7 +275,12 @@ class ViewController: UIViewController {
         }
     }
     
-
+    @IBAction func fireButtonPressed(_ sender: UIButton) {
+        bullet1IsInAction = true
+        bullet1Y = Double(characterImage.center.y)
+        bullet1X = Double(characterImage.center.x) + (bulletVelocity * Double(bullet1Direction))
+    }
+    
     
     
     
