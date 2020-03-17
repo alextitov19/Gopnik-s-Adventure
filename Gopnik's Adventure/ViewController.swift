@@ -267,6 +267,12 @@ class ViewController: UIViewController {
 
         } else {
             bullet1Image.isHidden = true
+            bullet1Y = 900
+            bullet1X = 300
+        }
+        
+        if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
+            bullet1IsInAction = false
         }
         
     }
