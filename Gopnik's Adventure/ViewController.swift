@@ -108,13 +108,11 @@ class ViewController: UIViewController {
     var leftTouchesEnded: Bool = true
     var rightTouchesEnded: Bool = true
     //bot attributes
-    
     struct Bot {
         var velocity: Double
         var isInActrion: Bool
         
     }
-    
     var bot1 = Bot(velocity: 0.05, isInActrion: true)
     var bot2 = Bot(velocity: 0.05, isInActrion: true)
     var bot3 = Bot(velocity: 0.05, isInActrion: true)
@@ -125,16 +123,14 @@ class ViewController: UIViewController {
     var bot8 = Bot(velocity: 0.05, isInActrion: true)
     var bot9 = Bot(velocity: 0.05, isInActrion: true)
     var bot10 = Bot(velocity: 0.05, isInActrion: true)
-    
-    
-
     //bullet attributes
     var bulletVelocity: Double = 0.5
     var bullet1IsInAction: Bool = false
     var bullet1Direction: Int = 1    //left = -1, right = 1
     var bullet1Y: Double = 600
     var bullet1X: Double = 300
-    
+    //game attributes
+    var needRestart = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -349,6 +345,47 @@ class ViewController: UIViewController {
 
         }
         
+        if characterImage.frame.intersects(bot1Image.frame) && bot1.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot2Image.frame) && bot2.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot3Image.frame) && bot3.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot4Image.frame) && bot4.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot5Image.frame) && bot5.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot6Image.frame) && bot6.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot7Image.frame) && bot7.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot8Image.frame) && bot8.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot9Image.frame) && bot9.isInActrion == true {
+            needRestart = true
+        }
+        
+        if characterImage.frame.intersects(bot10Image.frame) && bot10.isInActrion == true {
+            needRestart = true
+        }
+        
+        
         if bullet1IsInAction == true {
             bullet1Image.isHidden = false
             bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
@@ -358,6 +395,14 @@ class ViewController: UIViewController {
             bullet1Image.isHidden = true
             bullet1Y = 900
             bullet1X = 300
+        }
+        
+        
+        
+        if needRestart == true {
+            characterLocationX = 50.0
+            characterLocationY = 670.0
+            needRestart = false
         }
         
     }
