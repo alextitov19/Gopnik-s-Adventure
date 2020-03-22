@@ -108,16 +108,26 @@ class ViewController: UIViewController {
     var leftTouchesEnded: Bool = true
     var rightTouchesEnded: Bool = true
     //bot attributes
-    var b1velocity: Double = 0.05
-    var b2velocity: Double = 0.05
-    var b3velocity: Double = 0.05
-    var b4velocity: Double = 0.05
-    var b5velocity: Double = 0.05
-    var b6velocity: Double = 0.05
-    var b7velocity: Double = 0.05
-    var b8velocity: Double = 0.05
-    var b9velocity: Double = 0.05
-    var b10velocity: Double = 0.05
+    
+    struct Bot {
+        var velocity: Double
+        var isInActrion: Bool
+        
+    }
+    
+    var bot1 = Bot(velocity: 0.05, isInActrion: true)
+    var bot2 = Bot(velocity: 0.05, isInActrion: true)
+    var bot3 = Bot(velocity: 0.05, isInActrion: true)
+    var bot4 = Bot(velocity: 0.05, isInActrion: true)
+    var bot5 = Bot(velocity: 0.05, isInActrion: true)
+    var bot6 = Bot(velocity: 0.05, isInActrion: true)
+    var bot7 = Bot(velocity: 0.05, isInActrion: true)
+    var bot8 = Bot(velocity: 0.05, isInActrion: true)
+    var bot9 = Bot(velocity: 0.05, isInActrion: true)
+    var bot10 = Bot(velocity: 0.05, isInActrion: true)
+    
+    
+
     //bullet attributes
     var bulletVelocity: Double = 0.5
     var bullet1IsInAction: Bool = false
@@ -214,65 +224,140 @@ class ViewController: UIViewController {
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
        //bot logic
-        bot1Image.center = CGPoint(x: bot1Image.center.x + CGFloat(b1velocity), y: bot1Image.center.y)
-        bot2Image.center = CGPoint(x: bot2Image.center.x + CGFloat(b2velocity), y: bot2Image.center.y)
-        bot3Image.center = CGPoint(x: bot3Image.center.x + CGFloat(b3velocity), y: bot3Image.center.y)
-        bot4Image.center = CGPoint(x: bot4Image.center.x + CGFloat(b4velocity), y: bot4Image.center.y)
-        bot5Image.center = CGPoint(x: bot5Image.center.x + CGFloat(b5velocity), y: bot5Image.center.y)
-        bot6Image.center = CGPoint(x: bot6Image.center.x + CGFloat(b6velocity), y: bot6Image.center.y)
-        bot7Image.center = CGPoint(x: bot7Image.center.x + CGFloat(b7velocity), y: bot7Image.center.y)
-        bot8Image.center = CGPoint(x: bot8Image.center.x + CGFloat(b8velocity), y: bot8Image.center.y)
-        bot9Image.center = CGPoint(x: bot9Image.center.x + CGFloat(b9velocity), y: bot9Image.center.y)
-        bot10Image.center = CGPoint(x: bot10Image.center.x + CGFloat(b10velocity), y: bot10Image.center.y)
+        bot1Image.center = CGPoint(x: bot1Image.center.x + CGFloat(bot1.velocity), y: bot1Image.center.y)
+        bot2Image.center = CGPoint(x: bot2Image.center.x + CGFloat(bot2.velocity), y: bot2Image.center.y)
+        bot3Image.center = CGPoint(x: bot3Image.center.x + CGFloat(bot3.velocity), y: bot3Image.center.y)
+        bot4Image.center = CGPoint(x: bot4Image.center.x + CGFloat(bot4.velocity), y: bot4Image.center.y)
+        bot5Image.center = CGPoint(x: bot5Image.center.x + CGFloat(bot5.velocity), y: bot5Image.center.y)
+        bot6Image.center = CGPoint(x: bot6Image.center.x + CGFloat(bot6.velocity), y: bot6Image.center.y)
+        bot7Image.center = CGPoint(x: bot7Image.center.x + CGFloat(bot7.velocity), y: bot7Image.center.y)
+        bot8Image.center = CGPoint(x: bot8Image.center.x + CGFloat(bot8.velocity), y: bot8Image.center.y)
+        bot9Image.center = CGPoint(x: bot9Image.center.x + CGFloat(bot9.velocity), y: bot9Image.center.y)
+        bot10Image.center = CGPoint(x: bot10Image.center.x + CGFloat(bot10.velocity), y: bot10Image.center.y)
         
         
         if bot1Image.frame.intersects(leftWallImage.frame) || bot1Image.frame.intersects(rightWallImage.frame) {
-            b1velocity *= -1
+            bot1.velocity *= -1
         }
         if bot2Image.frame.intersects(leftWallImage.frame) || bot2Image.frame.intersects(rightWallImage.frame) {
-            b2velocity *= -1
+            bot2.velocity *= -1
         }
         if bot3Image.frame.intersects(leftWallImage.frame) || bot3Image.frame.intersects(rightWallImage.frame) {
-            b3velocity *= -1
+            bot3.velocity *= -1
         }
         if bot4Image.frame.intersects(leftWallImage.frame) || bot4Image.frame.intersects(rightWallImage.frame) {
-            b4velocity *= -1
+            bot4.velocity *= -1
         }
         if bot5Image.frame.intersects(leftWallImage.frame) || bot5Image.frame.intersects(rightWallImage.frame) {
-            b5velocity *= -1
+            bot5.velocity *= -1
         }
         if bot6Image.frame.intersects(leftWallImage.frame) || bot6Image.frame.intersects(rightWallImage.frame) {
-            b6velocity *= -1
+            bot6.velocity *= -1
         }
         if bot7Image.frame.intersects(leftWallImage.frame) || bot7Image.frame.intersects(rightWallImage.frame) {
-            b7velocity *= -1
+            bot7.velocity *= -1
         }
         if bot8Image.frame.intersects(leftWallImage.frame) || bot8Image.frame.intersects(rightWallImage.frame) {
-            b8velocity *= -1
+            bot8.velocity *= -1
         }
         if bot9Image.frame.intersects(leftWallImage.frame) || bot9Image.frame.intersects(rightWallImage.frame) {
-            b9velocity *= -1
+            bot9.velocity *= -1
         }
         if bot10Image.frame.intersects(leftWallImage.frame) || bot10Image.frame.intersects(rightWallImage.frame) {
-            b10velocity *= -1
+            bot10.velocity *= -1
         }
         
         
+        
+        
+        if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
+            bullet1IsInAction = false
+        }
+        
+        
+        if bullet1Image.frame.intersects(bot1Image.frame) {
+            bullet1IsInAction = false
+            bot1.isInActrion = false
+            bot1Image.isHidden = true
+        }
+        
+        if bullet1Image.frame.intersects(bot2Image.frame) {
+            bullet1IsInAction = false
+            bot2.isInActrion = false
+            bot2Image.isHidden = true
 
+
+        }
+        
+        if bullet1Image.frame.intersects(bot3Image.frame) {
+            bullet1IsInAction = false
+            bot3.isInActrion = false
+            bot3Image.isHidden = true
+
+
+        }
+        
+        if bullet1Image.frame.intersects(bot4Image.frame) {
+            bullet1IsInAction = false
+            bot4.isInActrion = false
+            bot4Image.isHidden = true
+
+
+        }
+        
+        if bullet1Image.frame.intersects(bot5Image.frame) {
+            bullet1IsInAction = false
+            bot5.isInActrion = false
+            bot5Image.isHidden = true
+
+
+        }
+        
+        if bullet1Image.frame.intersects(bot6Image.frame) {
+            bullet1IsInAction = false
+            bot6.isInActrion = false
+            bot6Image.isHidden = true
+
+
+        }
+        
+        if bullet1Image.frame.intersects(bot7Image.frame) {
+            bullet1IsInAction = false
+            bot7.isInActrion = false
+            bot7Image.isHidden = true
+
+        }
+        
+        if bullet1Image.frame.intersects(bot8Image.frame) {
+            bullet1IsInAction = false
+            bot8.isInActrion = false
+            bot8Image.isHidden = true
+
+        }
+        
+        if bullet1Image.frame.intersects(bot9Image.frame) {
+            bullet1IsInAction = false
+            bot9.isInActrion = false
+            bot9Image.isHidden = true
+
+        }
+        
+        if bullet1Image.frame.intersects(bot10Image.frame) {
+            bullet1IsInAction = false
+            bot10.isInActrion = false
+            bot10Image.isHidden = true
+
+        }
+        
         if bullet1IsInAction == true {
             bullet1Image.isHidden = false
             bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
             bullet1X = Double(bullet1Image.center.x)
             bullet1Y = Double(bullet1Image.center.y)
-
         } else {
             bullet1Image.isHidden = true
             bullet1Y = 900
             bullet1X = 300
-        }
-        
-        if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
-            bullet1IsInAction = false
         }
         
     }
