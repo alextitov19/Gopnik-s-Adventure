@@ -393,8 +393,6 @@ class ViewController: UIViewController {
             bullet1Y = Double(bullet1Image.center.y)
         } else {
             bullet1Image.isHidden = true
-            bullet1Y = 900
-            bullet1X = 300
         }
         
         
@@ -449,6 +447,7 @@ class ViewController: UIViewController {
         bullet1IsInAction = true
         bullet1Y = Double(characterImage.center.y)
         bullet1X = Double(characterImage.center.x) + (bulletVelocity * Double(bullet1Direction))
+        bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
     }
     
     
