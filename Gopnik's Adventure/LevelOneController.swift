@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LevelOneController.swift
 //  Gopnik's Adventure
 //
 //  Created by Test on 2/27/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LevelOneController: UIViewController {
     //borders
     @IBOutlet var bottomWallImage: UIImageView!
     @IBOutlet var topWallImage: UIImageView!
@@ -129,8 +129,6 @@ class ViewController: UIViewController {
     var bullet1Direction: Int = 1    //left = -1, right = 1
     var bullet1Y: Double = 600
     var bullet1X: Double = 300
-    //game attributes
-    var needRestart = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -346,43 +344,43 @@ class ViewController: UIViewController {
         }
         
         if characterImage.frame.intersects(bot1Image.frame) && bot1.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot2Image.frame) && bot2.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot3Image.frame) && bot3.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot4Image.frame) && bot4.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot5Image.frame) && bot5.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot6Image.frame) && bot6.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot7Image.frame) && bot7.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot8Image.frame) && bot8.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot9Image.frame) && bot9.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         if characterImage.frame.intersects(bot10Image.frame) && bot10.isInActrion == true {
-            needRestart = true
+            restart()
         }
         
         
@@ -397,20 +395,17 @@ class ViewController: UIViewController {
         
         
         
-        if needRestart == true {
-            characterLocationX = 50.0
-            characterLocationY = 670.0
-            needRestart = false
-        }
-        
     }
     
 
+    func restart() {
+        let storyboard = UIStoryboard(name: "StoryboardName", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewControllerID") as UIViewController
+        present(vc, animated: true, completion: nil)
+    }
     
     
-    
-    
-    
+
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
         upVelocityMultiplier = 5
