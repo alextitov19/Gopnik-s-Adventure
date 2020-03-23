@@ -401,6 +401,7 @@ class LevelOneController: UIViewController {
     func restart() {
         let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     
