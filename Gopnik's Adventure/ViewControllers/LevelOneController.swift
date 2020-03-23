@@ -344,43 +344,43 @@ class LevelOneController: UIViewController {
         }
         
         if characterImage.frame.intersects(bot1Image.frame) && bot1.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot2Image.frame) && bot2.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot3Image.frame) && bot3.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot4Image.frame) && bot4.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot5Image.frame) && bot5.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot6Image.frame) && bot6.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot7Image.frame) && bot7.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot8Image.frame) && bot8.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot9Image.frame) && bot9.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         if characterImage.frame.intersects(bot10Image.frame) && bot10.isInActrion == true {
-            restart()
+            returnToMenu()
         }
         
         
@@ -398,7 +398,7 @@ class LevelOneController: UIViewController {
     }
     
 
-    func restart() {
+    func returnToMenu() {
         let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
