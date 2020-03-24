@@ -93,6 +93,8 @@ class LevelOneController: UIViewController {
     @IBOutlet var bot10Image: UIImageView!
     //bullets
     @IBOutlet var bullet1Image: UIImageView!
+    //teleport
+    @IBOutlet var teleportImage: UIImageView!
     //character movement attributes
     var rightVelocityMultiplier: Double = 0.0
     var leftVelocityMultiplier: Double = 0.0
@@ -383,6 +385,9 @@ class LevelOneController: UIViewController {
             returnToMenu()
         }
         
+        if characterImage.frame.intersects(teleportImage.frame){
+            advanceToNextLevel()
+        }
         
         if bullet1IsInAction == true {
             bullet1Image.isHidden = false
@@ -405,7 +410,12 @@ class LevelOneController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    
+    func advanceToNextLevel() {
+        let storyboard = UIStoryboard(name: "LevelTwo", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelTwoController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
 
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
@@ -451,4 +461,6 @@ class LevelOneController: UIViewController {
     
     
 }
+
+
 
