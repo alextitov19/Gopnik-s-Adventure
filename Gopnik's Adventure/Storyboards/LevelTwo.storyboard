@@ -43,6 +43,9 @@
                                 <state key="normal" title="Up">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="upButtonTapped:" destination="2qI-hy-e65" eventType="touchUpInside" id="Cwe-sf-bpe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gT7-0B-Sm6">
                                 <rect key="frame" x="153" y="775" width="55" height="40"/>
@@ -97,6 +100,9 @@
                                 <state key="normal" title="Fire">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="fireButtonPressed:" destination="2qI-hy-e65" eventType="touchUpInside" id="ZTu-wu-NBa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <gestureRecognizers/>
@@ -112,9 +118,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hog-gc-Hgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="Bxr-17-XKz"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="EeT-7w-c4a"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="DW5-Rf-mmd"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="Bxr-17-XKz">
+                    <connections>
+                        <action selector="leftLongPress:" destination="2qI-hy-e65" id="Pxh-u5-6R3"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="EeT-7w-c4a">
+                    <connections>
+                        <action selector="rightLongPress:" destination="2qI-hy-e65" id="zuW-4A-OUf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="DW5-Rf-mmd">
+                    <connections>
+                        <action selector="downLongPress:" destination="2qI-hy-e65" id="pLY-zE-q0P"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-167" y="88"/>
         </scene>
