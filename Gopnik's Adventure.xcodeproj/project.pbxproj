@@ -15,8 +15,6 @@
 		52321F9F2408A06C008E3030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52321F9D2408A06C008E3030 /* LaunchScreen.storyboard */; };
 		5259ED172428422400753354 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259ED162428422400753354 /* MainMenuController.swift */; };
 		5259ED192428423900753354 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5259ED182428423900753354 /* MainMenu.storyboard */; };
-		528D6F50242A506800F80151 /* LevelTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528D6F4F242A506800F80151 /* LevelTwo.storyboard */; };
-		528D6F52242A508300F80151 /* LevelTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D6F51242A508300F80151 /* LevelTwoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 		52321FA02408A06C008E3030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5259ED162428422400753354 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5259ED182428423900753354 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
-		528D6F4F242A506800F80151 /* LevelTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelTwo.storyboard; sourceTree = "<group>"; };
-		528D6F51242A508300F80151 /* LevelTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +76,6 @@
 			children = (
 				5259ED182428423900753354 /* MainMenu.storyboard */,
 				52321F982408A06B008E3030 /* LevelOne.storyboard */,
-				528D6F4F242A506800F80151 /* LevelTwo.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -90,7 +85,6 @@
 			children = (
 				5259ED162428422400753354 /* MainMenuController.swift */,
 				52321F962408A06B008E3030 /* LevelOneController.swift */,
-				528D6F51242A508300F80151 /* LevelTwoController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,7 +151,6 @@
 				52321F9C2408A06C008E3030 /* Assets.xcassets in Resources */,
 				52321F9A2408A06B008E3030 /* LevelOne.storyboard in Resources */,
 				5259ED192428423900753354 /* MainMenu.storyboard in Resources */,
-				528D6F50242A506800F80151 /* LevelTwo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +165,6 @@
 				5259ED172428422400753354 /* MainMenuController.swift in Sources */,
 				52321F932408A06B008E3030 /* AppDelegate.swift in Sources */,
 				52321F952408A06B008E3030 /* SceneDelegate.swift in Sources */,
-				528D6F52242A508300F80151 /* LevelTwoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
