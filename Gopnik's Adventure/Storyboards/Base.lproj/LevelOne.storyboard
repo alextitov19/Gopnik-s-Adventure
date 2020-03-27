@@ -549,6 +549,7 @@
                         <outlet property="rightWallImage" destination="hYF-Dn-6dY" id="crx-yc-vFc"/>
                         <outlet property="teleportImage" destination="2ih-ih-Qm0" id="SAa-Pu-yKC"/>
                         <outlet property="topWallImage" destination="oHb-Ko-ZIc" id="1Pg-HO-hz9"/>
+                        <outlet property="upButton" destination="ceG-l5-p6E" id="ugY-1N-PKU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

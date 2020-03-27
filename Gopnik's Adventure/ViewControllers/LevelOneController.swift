@@ -109,6 +109,7 @@ class LevelOneController: UIViewController {
     var downTouchesEnded: Bool = true
     var leftTouchesEnded: Bool = true
     var rightTouchesEnded: Bool = true
+    var inAir: Bool = false
     //bot attributes
     struct Bot {
         var velocity: Double
@@ -131,6 +132,9 @@ class LevelOneController: UIViewController {
     var bullet1Direction: Int = 1    //left = -1, right = 1
     var bullet1Y: Double = 600
     var bullet1X: Double = 300
+    //buttons
+    @IBOutlet var upButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -210,10 +214,17 @@ class LevelOneController: UIViewController {
         }
         if topBorderHitCheck(frame: characterImage.frame) {
             downVelocityMultiplier = 0
+            inAir = false
         } else {
             downVelocityMultiplier += 0.01
+            inAir = true
         }
         
+        if inAir == true {
+            upButton.isUserInteractionEnabled = false
+        } else {
+            upButton.isUserInteractionEnabled = true
+        }
         
         characterImage.center = CGPoint(x: characterLocationX + (rightVelocity * rightVelocityMultiplier) - (leftVelocity * leftVelocityMultiplier), y:characterLocationY + (downVelocity * downVelocityMultiplier) - (upVelocity * upVelocityMultiplier))
         
