@@ -386,7 +386,7 @@ class LevelOneController: UIViewController {
         }
         
         if characterImage.frame.intersects(teleportImage.frame){
-            returnToMenu()
+            advanceToNextLevel()
         }
         
         if bullet1IsInAction == true {
@@ -410,7 +410,12 @@ class LevelOneController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-
+    func advanceToNextLevel() {
+        let storyboard = UIStoryboard(name: "LevelTwo", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelTwoController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
 
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
