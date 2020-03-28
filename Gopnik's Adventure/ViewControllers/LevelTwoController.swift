@@ -115,10 +115,10 @@ class LevelTwoController: UIViewController {
         var leftVelocityMultiplier: Double = 0.0
         var upVelocityMultiplier: Double = 0.0
         var downVelocityMultiplier: Double = 0.0
-        var rightVelocity: Double = 1
-        var leftVelocity: Double = 1
-        var upVelocity: Double = 1
-        var downVelocity: Double = 1
+        var rightVelocity: Double = 0.1
+        var leftVelocity: Double = 0.1
+        var upVelocity: Double = 0.1
+        var downVelocity: Double = 0.1
         var characterLocationX: Double = 40.0
         var characterLocationY: Double = 663.0
         var downTouchesEnded: Bool = true
@@ -150,7 +150,7 @@ class LevelTwoController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-            let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
+            let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
         }
         
         
