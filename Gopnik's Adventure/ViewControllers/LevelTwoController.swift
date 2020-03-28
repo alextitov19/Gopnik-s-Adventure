@@ -11,10 +11,10 @@ import UIKit
 class LevelTwoController: UIViewController {
     
     //Borders
-    @IBOutlet var TopWallImage: UIImageView!
-    @IBOutlet var LeftWallImage: UIImageView!
-    @IBOutlet var RightWallImage: UIImageView!
-    @IBOutlet var BottomWallImage: UIImageView!
+    @IBOutlet var topWallImage: UIImageView!
+    @IBOutlet var leftWallImage: UIImageView!
+    @IBOutlet var rightWallImage: UIImageView!
+    @IBOutlet var bottomWallImage: UIImageView!
     //Image 1
     @IBOutlet var I1TopImage: UIImageView!
     @IBOutlet var I1BottomImage: UIImageView!
@@ -81,7 +81,7 @@ class LevelTwoController: UIViewController {
     @IBOutlet var I16BottomImage: UIImageView!
     @IBOutlet var I16LeftImage: UIImageView!
     //Image 17
-    @IBOutlet var I17Topimage: UIImageView!
+    @IBOutlet var I17TopImage: UIImageView!
     @IBOutlet var I17BottomImage: UIImageView!
     @IBOutlet var I17RightImage: UIImageView!
     //Image 18
@@ -115,10 +115,10 @@ class LevelTwoController: UIViewController {
         var leftVelocityMultiplier: Double = 0.0
         var upVelocityMultiplier: Double = 0.0
         var downVelocityMultiplier: Double = 0.0
-        var rightVelocity: Double = 0.1
-        var leftVelocity: Double = 0.1
-        var upVelocity: Double = 0.1
-        var downVelocity: Double = 0.1
+        var rightVelocity: Double = 1
+        var leftVelocity: Double = 1
+        var upVelocity: Double = 1
+        var downVelocity: Double = 1
         var characterLocationX: Double = 40.0
         var characterLocationY: Double = 663.0
         var downTouchesEnded: Bool = true
@@ -150,7 +150,7 @@ class LevelTwoController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-            let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
+            let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
         }
         
         
@@ -179,55 +179,21 @@ class LevelTwoController: UIViewController {
                 rightVelocityMultiplier = 2
             }
             
-            //right border hit
-//            func rightBorderHitCheck(frame :CGRect) -> Bool {
-//                if (frame.intersects(rightWallImage.frame) || frame.intersects(I1LeftImage.frame) || frame.intersects(I3LeftImage.frame) || frame.intersects(I4LeftImage.frame) || frame.intersects(I6LeftImage.frame) || frame.intersects(I9LeftImage.frame) || frame.intersects(I10LeftImage.frame) || frame.intersects(I12LeftImage.frame) || frame.intersects(I15LeftImage.frame) || frame.intersects(I16LeftImage.frame)) {
-//                    return true
-//                } else {
-//                    return false
-//                }
-//            }
-//            //left border hit
-//            func leftBorderHitCheck(frame :CGRect) -> Bool {
-//                if (frame.intersects(leftWallImage.frame) || frame.intersects(I2RightImage.frame) || frame.intersects(I5RightImage.frame) || frame.intersects(I7RightImage.frame) || frame.intersects(I8RightImage.frame) || frame.intersects(I11RightImage.frame) || frame.intersects(I13RightImage.frame) || frame.intersects(I14RightImage.frame)) {
-//                    return true
-//                } else {
-//                    return false
-//                }
-//            }
-//            //top border hit
-//            func topBorderHitCheck(frame :CGRect) -> Bool {
-//                if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame)) {
-//                    return true
-//                } else {
-//                    return false
-//                }
-//            }
-//            //bottom border hit
-//            func bottomBorderHitCheck(frame :CGRect) -> Bool {
-//                if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame)) {
-//                    return true
-//                } else {
-//                    return false
-//                }
-//            }
-//
-//
-//
-//            if leftBorderHitCheck(frame: characterImage.frame){
-//                leftVelocityMultiplier = 0
-//            }
-//            if rightBorderHitCheck(frame: characterImage.frame) {
-//                rightVelocityMultiplier = 0
-//            }
-//            if bottomBorderHitCheck(frame: characterImage.frame) {
-//                upVelocityMultiplier = 0
-//            }
-//            if topBorderHitCheck(frame: characterImage.frame) {
-//                downVelocityMultiplier = 0
-//            } else {
-//                downVelocityMultiplier += 0.01
-//            }
+          
+            if leftBorderHitCheck(frame: characterImage.frame){
+                leftVelocityMultiplier = 0
+            }
+            if rightBorderHitCheck(frame: characterImage.frame) {
+                rightVelocityMultiplier = 0
+            }
+            if bottomBorderHitCheck(frame: characterImage.frame) {
+                upVelocityMultiplier = 0
+            }
+            if topBorderHitCheck(frame: characterImage.frame) {
+                downVelocityMultiplier = 0
+            } else {
+                downVelocityMultiplier += 0.01
+            }
             
             
             characterImage.center = CGPoint(x: characterLocationX + (rightVelocity * rightVelocityMultiplier) - (leftVelocity * leftVelocityMultiplier), y:characterLocationY + (downVelocity * downVelocityMultiplier) - (upVelocity * upVelocityMultiplier))
@@ -416,6 +382,42 @@ class LevelTwoController: UIViewController {
             
             
         }
+    
+    //right border hit
+              func rightBorderHitCheck(frame :CGRect) -> Bool {
+                  if (frame.intersects(rightWallImage.frame) || frame.intersects(I1LeftImage.frame) || frame.intersects(I4LeftImage.frame) || frame.intersects(I6LeftImage.frame) || frame.intersects(I9LeftImage.frame) || frame.intersects(I11LeftImage.frame) || frame.intersects(I12LeftImage.frame) || frame.intersects(I14LeftImage.frame) || frame.intersects(I16LeftImage.frame) || frame.intersects(I18LeftImage.frame) || frame.intersects(I20LeftImage.frame)) {
+                      return true
+                  } else {
+                      return false
+                  }
+              }
+              //left border hit
+              func leftBorderHitCheck(frame :CGRect) -> Bool {
+                  if (frame.intersects(leftWallImage.frame) || frame.intersects(I2RightImage.frame) || frame.intersects(I3RightImage.frame) || frame.intersects(I5RightImage.frame) || frame.intersects(I7RightImage.frame) || frame.intersects(I8RightImage.frame) || frame.intersects(I10RightImage.frame) || frame.intersects(I12RightImage.frame) || frame.intersects(I13RightImage.frame) || frame.intersects(I15RightImage.frame) || frame.intersects(I17RightImage.frame) || frame.intersects(I19RightImage.frame) || frame.intersects(I21RightImage.frame)) {
+                      return true
+                  } else {
+                      return false
+                  }
+              }
+              //top border hit
+              func topBorderHitCheck(frame :CGRect) -> Bool {
+                  if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame)) {
+                      return true
+                  } else {
+                      return false
+                  }
+              }
+              //bottom border hit
+              func bottomBorderHitCheck(frame :CGRect) -> Bool {
+                  if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame) || frame.intersects(I17BottomImage.frame) || frame.intersects(I18BottomImage.frame) || frame.intersects(I19BottomImage.frame) || frame.intersects(I20BottomImage.frame) || frame.intersects(I21BottomImage.frame)) {
+                      return true
+                  } else {
+                      return false
+                  }
+              }
+
+
+
         
 
         func returnToMenu() {

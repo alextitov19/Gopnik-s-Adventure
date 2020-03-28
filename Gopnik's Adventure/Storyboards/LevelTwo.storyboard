@@ -525,7 +525,6 @@
                         <viewLayoutGuide key="safeArea" id="WZ5-8d-CtE"/>
                     </view>
                     <connections>
-                        <outlet property="BottomWallImage" destination="TJv-zl-ONy" id="adZ-D9-MPl"/>
                         <outlet property="I10BottomImage" destination="xev-F3-BR5" id="ea2-B6-xKN"/>
                         <outlet property="I10RightImage" destination="i23-vz-L6U" id="dn5-iW-0lw"/>
                         <outlet property="I10TopImage" destination="3BI-7J-Ohe" id="OQi-Vr-SoS"/>
@@ -550,7 +549,7 @@
                         <outlet property="I16TopImage" destination="KyV-uw-Qev" id="ekl-Je-0Zz"/>
                         <outlet property="I17BottomImage" destination="LPI-0I-WSU" id="Uda-uo-GhH"/>
                         <outlet property="I17RightImage" destination="aFc-m1-wwb" id="DET-oJ-d0n"/>
-                        <outlet property="I17Topimage" destination="n0P-F3-ygS" id="vMD-SL-f98"/>
+                        <outlet property="I17TopImage" destination="n0P-F3-ygS" id="vMD-SL-f98"/>
                         <outlet property="I18BottomImage" destination="MX7-Dk-mdN" id="qXp-U6-2rI"/>
                         <outlet property="I18LeftImage" destination="i8L-5u-WsJ" id="Qyo-dM-Wwx"/>
                         <outlet property="I18TopImage" destination="7Gn-vD-mQx" id="td1-a7-lfR"/>
@@ -590,10 +589,11 @@
                         <outlet property="I9BottomImage" destination="vFV-sG-Unt" id="yST-7o-cyH"/>
                         <outlet property="I9LeftImage" destination="mqX-bH-1Vs" id="E6i-79-e82"/>
                         <outlet property="I9TopImage" destination="NTc-v2-p8J" id="c5d-ob-Eae"/>
-                        <outlet property="LeftWallImage" destination="VGf-nd-LzC" id="BGP-az-IlC"/>
-                        <outlet property="RightWallImage" destination="F30-Hg-aT0" id="OIT-jC-VdV"/>
-                        <outlet property="TopWallImage" destination="Bgv-uV-FeZ" id="00W-q7-DcM"/>
+                        <outlet property="bottomWallImage" destination="TJv-zl-ONy" id="adZ-D9-MPl"/>
                         <outlet property="characterImage" destination="xk8-Pb-LHF" id="OED-W4-JYJ"/>
+                        <outlet property="leftWallImage" destination="VGf-nd-LzC" id="BGP-az-IlC"/>
+                        <outlet property="rightWallImage" destination="F30-Hg-aT0" id="OIT-jC-VdV"/>
+                        <outlet property="topWallImage" destination="Bgv-uV-FeZ" id="00W-q7-DcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG8-d0-GbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
