@@ -10,6 +10,90 @@ import UIKit
 
 class LevelTwoController: UIViewController {
     
+    
+    //Image 1
+    @IBOutlet var I1TopImage: UIImageView!
+    @IBOutlet var I1BottomImage: UIImageView!
+    @IBOutlet var I1LeftImage: UIImageView!
+    //Image 2
+    @IBOutlet var I2TopImage: UIImageView!
+    @IBOutlet var I2BottomImage: UIImageView!
+    @IBOutlet var I2RightImage: UIImageView!
+    //Image 3
+    @IBOutlet var I3TopImage: UIImageView!
+    @IBOutlet var I3BottomImage: UIImageView!
+    @IBOutlet var I3RightImage: UIImageView!
+    
+    //Image 4
+    @IBOutlet var I4TopImage: UIImageView!
+    @IBOutlet var I4BottomImage: UIImageView!
+    @IBOutlet var I4LeftImage: UIImageView!
+    
+    //Image 5
+    @IBOutlet var I5TopImage: UIImageView!
+    @IBOutlet var I5BottomImage: UIImageView!
+    @IBOutlet var I5RightImage: UIImageView!
+    
+    //Image 6
+    @IBOutlet var I6TopImage: UIImageView!
+    @IBOutlet var I6BottomImage: UIImageView!
+    @IBOutlet var I6LeftImage: UIImageView!
+    
+    //Image 7
+    @IBOutlet var I7TopImage: UIImageView!
+    @IBOutlet var I7BottomImage: UIImageView!
+    @IBOutlet var I7RightImage: UIImageView!
+    
+    //Image 8
+    @IBOutlet var I8TopImage: UIImageView!
+    @IBOutlet var I8BottomImage: UIImageView!
+    @IBOutlet var I8RightImage: UIImageView!
+    
+    //Image 9
+    @IBOutlet var I9TopImage: UIImageView!
+    @IBOutlet var I9BottomImage: UIImageView!
+    @IBOutlet var I9LeftImage: UIImageView!
+    
+    //Image 10
+    @IBOutlet var I10TopImage: UIImageView!
+    @IBOutlet var I10BottomImage: UIImageView!
+    @IBOutlet var I10RightImage: UIImageView!
+    
+    //Image 11
+    @IBOutlet var I11TopImage: UIImageView!
+    @IBOutlet var I11BottomImage: UIImageView!
+    @IBOutlet var I11LeftImage: UIImageView!
+    
+    //Image 12
+    @IBOutlet var I12TopImage: UIImageView!
+    @IBOutlet var I12BottomImage: UIImageView!
+    @IBOutlet var I12LeftImage: UIImageView!
+    @IBOutlet var I12RightImage: UIImageView!
+    
+    //Image 13
+    
+    //Image 14
+    
+    //Image 15
+    
+    //Image 16
+    
+    //Image 17
+    
+    //Image 18
+    
+    //Image 19
+    
+    //Image 20
+    
+    //Image 21
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet var characterImage: UIImageView!
     //character movement attributes
         var rightVelocityMultiplier: Double = 0.0
