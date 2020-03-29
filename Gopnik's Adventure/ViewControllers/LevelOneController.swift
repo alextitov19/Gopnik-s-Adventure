@@ -135,12 +135,12 @@ class LevelOneController: UIViewController {
     //buttons
     @IBOutlet var upButton: UIButton!
     
-    
+    var timer: Timer?;
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
     }
     
     
@@ -408,6 +408,7 @@ class LevelOneController: UIViewController {
     }
     //bottom border hit
     func bottomBorderHitCheck(frame :CGRect) -> Bool {
+//        NSLog("Layer1 bottomBorderHitCheck");
         if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame)) {
             return true
         } else {
@@ -417,6 +418,8 @@ class LevelOneController: UIViewController {
     
 
     func returnToMenu() {
+        timer!.invalidate()
+        timer = nil
         let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
@@ -424,6 +427,8 @@ class LevelOneController: UIViewController {
     }
     
     func advanceToNextLevel() {
+        timer!.invalidate()
+        timer = nil
         let storyboard = UIStoryboard(name: "LevelTwo", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LevelTwoController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
