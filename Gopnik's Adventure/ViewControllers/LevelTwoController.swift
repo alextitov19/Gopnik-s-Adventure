@@ -166,10 +166,12 @@ class LevelTwoController: UIViewController {
     var bullet1Y: Double = 600
     var bullet1X: Double = 300
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
     }
     
     
@@ -404,6 +406,18 @@ class LevelTwoController: UIViewController {
             returnToMenu()
         }
         
+        if characterImage.frame.intersects(bot11Image.frame) && bot11.isInActrion == true {
+            returnToMenu()
+        }
+        
+        if characterImage.frame.intersects(bot12Image.frame) && bot12.isInActrion == true {
+            returnToMenu()
+        }
+        
+        if characterImage.frame.intersects(bot13Image.frame) && bot13.isInActrion == true {
+            returnToMenu()
+        }
+        
 //        if characterImage.frame.intersects(teleportImage.frame){
 //            advanceToNextLevel()
 //        }
@@ -460,6 +474,8 @@ class LevelTwoController: UIViewController {
     
     
     func returnToMenu() {
+        timer!.invalidate()
+        timer = nil
         let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
@@ -467,6 +483,8 @@ class LevelTwoController: UIViewController {
     }
     
     func advanceToNextLevel() {
+        timer!.invalidate()
+        timer = nil
         let storyboard = UIStoryboard(name: "LevelTwo", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LevelTwoController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
