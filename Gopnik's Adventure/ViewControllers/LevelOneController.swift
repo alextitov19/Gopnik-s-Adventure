@@ -117,15 +117,15 @@ class LevelOneController: UIViewController {
         
     }
     var bot1 = Bot(velocity: 0.05, isInActrion: true)
-    var bot2 = Bot(velocity: 0.05, isInActrion: true)
-    var bot3 = Bot(velocity: 0.05, isInActrion: true)
-    var bot4 = Bot(velocity: 0.05, isInActrion: true)
-    var bot5 = Bot(velocity: 0.05, isInActrion: true)
-    var bot6 = Bot(velocity: 0.05, isInActrion: true)
-    var bot7 = Bot(velocity: 0.05, isInActrion: true)
-    var bot8 = Bot(velocity: 0.05, isInActrion: true)
-    var bot9 = Bot(velocity: 0.05, isInActrion: true)
-    var bot10 = Bot(velocity: 0.05, isInActrion: true)
+    var bot2 = Bot(velocity: 0.07, isInActrion: true)
+    var bot3 = Bot(velocity: 0.09, isInActrion: true)
+    var bot4 = Bot(velocity: 0.15, isInActrion: true)
+    var bot5 = Bot(velocity: 0.25, isInActrion: true)
+    var bot6 = Bot(velocity: 0.11, isInActrion: true)
+    var bot7 = Bot(velocity: 0.32, isInActrion: true)
+    var bot8 = Bot(velocity: 0.08, isInActrion: true)
+    var bot9 = Bot(velocity: 0.17, isInActrion: true)
+    var bot10 = Bot(velocity: 0.13, isInActrion: true)
     //bullet attributes
     var bulletVelocity: Double = 0.5
     var bullet1IsInAction: Bool = false
@@ -136,8 +136,8 @@ class LevelOneController: UIViewController {
     @IBOutlet var upButton: UIButton!
     
     var timer: Timer?;
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
@@ -160,7 +160,7 @@ class LevelOneController: UIViewController {
             upVelocityMultiplier = 0
         }
         
-
+        
         if leftTouchesEnded == false {
             leftVelocityMultiplier = 2
         }
@@ -198,7 +198,7 @@ class LevelOneController: UIViewController {
         
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-       //bot logic
+        //bot logic
         bot1Image.center = CGPoint(x: bot1Image.center.x + CGFloat(bot1.velocity), y: bot1Image.center.y)
         bot2Image.center = CGPoint(x: bot2Image.center.x + CGFloat(bot2.velocity), y: bot2Image.center.y)
         bot3Image.center = CGPoint(x: bot3Image.center.x + CGFloat(bot3.velocity), y: bot3Image.center.y)
@@ -260,68 +260,68 @@ class LevelOneController: UIViewController {
             bullet1IsInAction = false
             bot2.isInActrion = false
             bot2Image.isHidden = true
-
-
+            
+            
         }
         
         if bullet1Image.frame.intersects(bot3Image.frame) {
             bullet1IsInAction = false
             bot3.isInActrion = false
             bot3Image.isHidden = true
-
-
+            
+            
         }
         
         if bullet1Image.frame.intersects(bot4Image.frame) {
             bullet1IsInAction = false
             bot4.isInActrion = false
             bot4Image.isHidden = true
-
-
+            
+            
         }
         
         if bullet1Image.frame.intersects(bot5Image.frame) {
             bullet1IsInAction = false
             bot5.isInActrion = false
             bot5Image.isHidden = true
-
-
+            
+            
         }
         
         if bullet1Image.frame.intersects(bot6Image.frame) {
             bullet1IsInAction = false
             bot6.isInActrion = false
             bot6Image.isHidden = true
-
-
+            
+            
         }
         
         if bullet1Image.frame.intersects(bot7Image.frame) {
             bullet1IsInAction = false
             bot7.isInActrion = false
             bot7Image.isHidden = true
-
+            
         }
         
         if bullet1Image.frame.intersects(bot8Image.frame) {
             bullet1IsInAction = false
             bot8.isInActrion = false
             bot8Image.isHidden = true
-
+            
         }
         
         if bullet1Image.frame.intersects(bot9Image.frame) {
             bullet1IsInAction = false
             bot9.isInActrion = false
             bot9Image.isHidden = true
-
+            
         }
         
         if bullet1Image.frame.intersects(bot10Image.frame) {
             bullet1IsInAction = false
             bot10.isInActrion = false
             bot10Image.isHidden = true
-
+            
         }
         
         if characterImage.frame.intersects(bot1Image.frame) && bot1.isInActrion == true {
@@ -381,7 +381,7 @@ class LevelOneController: UIViewController {
         
         
     }
-
+    
     //right border hit
     func rightBorderHitCheck(frame :CGRect) -> Bool {
         if (frame.intersects(rightWallImage.frame) || frame.intersects(I1LeftImage.frame) || frame.intersects(I3LeftImage.frame) || frame.intersects(I4LeftImage.frame) || frame.intersects(I6LeftImage.frame) || frame.intersects(I9LeftImage.frame) || frame.intersects(I10LeftImage.frame) || frame.intersects(I12LeftImage.frame) || frame.intersects(I15LeftImage.frame) || frame.intersects(I16LeftImage.frame)) {
@@ -408,7 +408,7 @@ class LevelOneController: UIViewController {
     }
     //bottom border hit
     func bottomBorderHitCheck(frame :CGRect) -> Bool {
-//        NSLog("Layer1 bottomBorderHitCheck");
+        //        NSLog("Layer1 bottomBorderHitCheck");
         if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame)) {
             return true
         } else {
@@ -416,7 +416,7 @@ class LevelOneController: UIViewController {
         }
     }
     
-
+    
     func returnToMenu() {
         timer!.invalidate()
         timer = nil
@@ -434,7 +434,7 @@ class LevelOneController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
-
+    
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
         upVelocityMultiplier = 5
