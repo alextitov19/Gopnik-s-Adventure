@@ -186,6 +186,7 @@ class LevelTwoController: UIViewController {
         bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13]
         for i in 0..<bots.count {
             bots[i].isInActrion = true
+            bots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
         }
             
         }
