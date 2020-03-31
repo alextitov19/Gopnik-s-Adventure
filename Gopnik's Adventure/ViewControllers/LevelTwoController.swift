@@ -166,6 +166,7 @@ class LevelTwoController: UIViewController {
     var bot11 = Bot()
     var bot12 = Bot()
     var bot13 = Bot()
+    var bouncyBots: [BouncyBot] = []
     var bouncyBot1 = BouncyBot()
     var bouncyBot2 = BouncyBot()
     //bot assignments
@@ -184,11 +185,15 @@ class LevelTwoController: UIViewController {
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
         bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13]
+        bouncyBots = [bouncyBot1, bouncyBot2]
         for i in 0..<bots.count {
             bots[i].isInActrion = true
             bots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
         }
-            
+        for i in 0..<bouncyBots.count {
+            bouncyBots[i].isInActrion = true
+            bouncyBots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
+        }
         }
     
     
