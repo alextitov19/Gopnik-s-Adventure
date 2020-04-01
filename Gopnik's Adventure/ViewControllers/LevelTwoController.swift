@@ -135,8 +135,11 @@ class LevelTwoController: UIViewController {
     //Bouncy Bots
     @IBOutlet var bouncyBot1Image: UIImageView!
     @IBOutlet var bouncyBot2Image: UIImageView!
+    //Turret
+    @IBOutlet var turretImage: UIImageView!
+    @IBOutlet var fireballImage: UIImageView!
     
-    
+    @IBOutlet var teleportImage: UIImageView!
     
     
     
@@ -183,6 +186,11 @@ class LevelTwoController: UIViewController {
     var bullet1X: Double = 300
     
     var timer: Timer?
+    var fireballVelocityX: Double = 0.0
+    var fireballVelocityY: Double = 0.0
+    var fireballCenterX: Double = 0.0
+    var fireballCenterY: Double = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -202,6 +210,9 @@ class LevelTwoController: UIViewController {
             bouncyBots[i].velocity = 0.05 + (Double.random(in: -0.02..<0.02))
             bouncyBots[i].image = bouncyBotImages[i]
         }
+        fireballCenterX = Double(fireballImage.center.x)
+        fireballCenterY = Double(fireballImage.center.y)
+        shootFireball()
     }
     
     
@@ -283,7 +294,7 @@ class LevelTwoController: UIViewController {
         for i in 0..<bouncyBots.count {
             bouncyBots[i].image!.center = CGPoint(x: bouncyBots[i].image!.center.x + CGFloat(bouncyBots[i].velocity), y: bouncyBots[i].image!.center.y)
             bouncyBots[i].topRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y, width: bouncyBots[i].image!.frame.width, height: CGFloat(6))
-                       bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
+            bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
             if bouncyBots[i].image!.frame.intersects(leftWallImage.frame) || bouncyBots[i].image!.frame.intersects(rightWallImage.frame) {
                 bouncyBots[i].velocity *= -1
             }
@@ -295,9 +306,7 @@ class LevelTwoController: UIViewController {
                 returnToMenu()
             }
         }
-        //        if characterImage.frame.intersects(teleportImage.frame){
-        //            advanceToNextLevel()
-        //        }
+        
         
         if bullet1IsInAction == true {
             bullet1Image.isHidden = false
@@ -308,7 +317,20 @@ class LevelTwoController: UIViewController {
             bullet1Image.isHidden = true
         }
         
+        fireballImage.center = CGPoint(x: Double(fireballImage.center.x) + fireballVelocityX, y: Double(fireballImage.center.y) + fireballVelocityY)
         
+        if(rightBorderHitCheck(frame: fireballImage.frame) || leftBorderHitCheck(frame: fireballImage.frame) || topBorderHitCheck(frame: fireballImage.frame) || bottomBorderHitCheck(frame: fireballImage.frame)) {
+            shootFireball()
+        }
+        
+        
+        if characterImage.frame.intersects(fireballImage.frame) {
+            returnToMenu()
+        }
+        
+        if characterImage.frame.intersects(teleportImage.frame){
+            returnToMenu()
+        }
         
     }
     
@@ -403,7 +425,11 @@ class LevelTwoController: UIViewController {
         bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
     }
     
-    
+    func shootFireball() {
+        fireballVelocityX = ((characterLocationX - fireballCenterX) / 5000)
+        fireballVelocityY = ((characterLocationY - fireballCenterY) / 5000)
+        fireballImage.center = CGPoint(x: fireballCenterX, y: fireballCenterY)
+    }
     
     
     

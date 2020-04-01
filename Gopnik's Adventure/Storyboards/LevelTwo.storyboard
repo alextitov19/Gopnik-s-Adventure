@@ -586,7 +586,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xk8-Pb-LHF">
                                 <rect key="frame" x="7" y="725" width="7" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-WI-InA">
                                 <rect key="frame" x="20" y="731" width="11" height="2"/>
@@ -602,6 +602,21 @@
                                 <rect key="frame" x="350" y="392" width="12" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-mD-Vs7">
+                                <rect key="frame" x="209" y="267" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lzg-iE-7vO">
+                                <rect key="frame" x="214" y="288" width="10" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOr-gU-GhZ">
+                                <rect key="frame" x="4" y="35" width="23" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54091886087157948" green="1" blue="0.76434054407538876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -690,9 +705,12 @@
                         <outlet property="bouncyBot2Image" destination="yyY-0i-bww" id="ueb-9I-A5M"/>
                         <outlet property="bullet1Image" destination="rEw-WI-InA" id="xPu-Iz-SWf"/>
                         <outlet property="characterImage" destination="xk8-Pb-LHF" id="OED-W4-JYJ"/>
+                        <outlet property="fireballImage" destination="Lzg-iE-7vO" id="ffo-4g-43J"/>
                         <outlet property="leftWallImage" destination="VGf-nd-LzC" id="BGP-az-IlC"/>
                         <outlet property="rightWallImage" destination="F30-Hg-aT0" id="OIT-jC-VdV"/>
+                        <outlet property="teleportImage" destination="kOr-gU-GhZ" id="yVw-8g-qcs"/>
                         <outlet property="topWallImage" destination="Bgv-uV-FeZ" id="00W-q7-DcM"/>
+                        <outlet property="turretImage" destination="qmn-mD-Vs7" id="xQ7-g0-zhC"/>
                         <outlet property="upButton" destination="1Bz-On-IaT" id="d5K-37-MMt"/>
                     </connections>
                 </viewController>
