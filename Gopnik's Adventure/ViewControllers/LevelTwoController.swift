@@ -199,10 +199,8 @@ class LevelTwoController: UIViewController {
         }
         for i in 0..<bouncyBots.count {
             bouncyBots[i].isInActrion = true
-            bouncyBots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
+            bouncyBots[i].velocity = 0.05 + (Double.random(in: -0.02..<0.02))
             bouncyBots[i].image = bouncyBotImages[i]
-            bouncyBots[i].topRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y, width: bouncyBots[i].image!.frame.width, height: CGFloat(6))
-            bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
         }
     }
     
@@ -283,16 +281,17 @@ class LevelTwoController: UIViewController {
         }
         
         for i in 0..<bouncyBots.count {
+            bouncyBots[i].image!.center = CGPoint(x: bouncyBots[i].image!.center.x + CGFloat(bouncyBots[i].velocity), y: bouncyBots[i].image!.center.y)
+            bouncyBots[i].topRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y, width: bouncyBots[i].image!.frame.width, height: CGFloat(6))
+                       bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
             if bouncyBots[i].image!.frame.intersects(leftWallImage.frame) || bouncyBots[i].image!.frame.intersects(rightWallImage.frame) {
-                bots[i].velocity *= -1
+                bouncyBots[i].velocity *= -1
             }
             if characterImage.frame.intersects(bouncyBots[i].topRect) && bouncyBots[i].isInActrion == true {
                 upVelocityMultiplier = 10
                 downVelocityMultiplier = 0
-                NSLog("Top of bot hit")
             }
             if characterImage.frame.intersects(bouncyBots[i].bottomRect) && bouncyBots[i].isInActrion == true {
-                NSLog("Bottom of bot hit")
                 returnToMenu()
             }
         }
