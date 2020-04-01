@@ -13,10 +13,12 @@ import UIKit
 class Bot {
     var velocity: Double = 0.0
     var isInActrion: Bool = false
+    var image: UIImageView?
 }
 
 class BouncyBot: Bot {
     var topRect = CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+    var bottomRect = CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
 }
 class LevelTwoController: UIViewController {
     
@@ -130,7 +132,9 @@ class LevelTwoController: UIViewController {
     @IBOutlet var upButton: UIButton!
     //Bullets
     @IBOutlet var bullet1Image: UIImageView!
-    
+    //Bouncy Bots
+    @IBOutlet var bouncyBot1Image: UIImageView!
+    @IBOutlet var bouncyBot2Image: UIImageView!
     
     
     
@@ -185,16 +189,22 @@ class LevelTwoController: UIViewController {
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
         bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13]
+        let botImages = [bot1Image, bot2Image, bot3Image, bot4Image, bot5Image, bot6Image, bot7Image, bot8Image, bot9Image, bot10Image, bot11Image, bot12Image, bot13Image]
+        let bouncyBotImages = [bouncyBot1Image, bouncyBot2Image]
         bouncyBots = [bouncyBot1, bouncyBot2]
         for i in 0..<bots.count {
             bots[i].isInActrion = true
             bots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
+            bots[i].image = botImages[i]
         }
         for i in 0..<bouncyBots.count {
             bouncyBots[i].isInActrion = true
             bouncyBots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
+            bouncyBots[i].image = bouncyBotImages[i]
+            bouncyBots[i].topRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y, width: bouncyBots[i].image!.frame.width, height: CGFloat(6))
+            bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
         }
-        }
+    }
     
     
     
@@ -252,199 +262,40 @@ class LevelTwoController: UIViewController {
         
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-        //Bot logic
-        bot1Image.center = CGPoint(x: bot1Image.center.x + CGFloat(bot1.velocity), y: bot1Image.center.y)
-        bot2Image.center = CGPoint(x: bot2Image.center.x + CGFloat(bot2.velocity), y: bot2Image.center.y)
-        bot3Image.center = CGPoint(x: bot3Image.center.x + CGFloat(bot3.velocity), y: bot3Image.center.y)
-        bot4Image.center = CGPoint(x: bot4Image.center.x + CGFloat(bot4.velocity), y: bot4Image.center.y)
-        bot5Image.center = CGPoint(x: bot5Image.center.x + CGFloat(bot5.velocity), y: bot5Image.center.y)
-        bot6Image.center = CGPoint(x: bot6Image.center.x + CGFloat(bot6.velocity), y: bot6Image.center.y)
-        bot7Image.center = CGPoint(x: bot7Image.center.x + CGFloat(bot7.velocity), y: bot7Image.center.y)
-        bot8Image.center = CGPoint(x: bot8Image.center.x + CGFloat(bot8.velocity), y: bot8Image.center.y)
-        bot9Image.center = CGPoint(x: bot9Image.center.x + CGFloat(bot9.velocity), y: bot9Image.center.y)
-        bot10Image.center = CGPoint(x: bot10Image.center.x + CGFloat(bot10.velocity), y: bot10Image.center.y)
-        bot11Image.center = CGPoint(x: bot11Image.center.x + CGFloat(bot11.velocity), y: bot11Image.center.y)
-        bot12Image.center = CGPoint(x: bot12Image.center.x + CGFloat(bot12.velocity), y: bot12Image.center.y)
-        bot13Image.center = CGPoint(x: bot13Image.center.x + CGFloat(bot13.velocity), y: bot13Image.center.y)
-        
-        
-        if bot1Image.frame.intersects(leftWallImage.frame) || bot1Image.frame.intersects(rightWallImage.frame) {
-            bot1.velocity *= -1
-        }
-        if bot2Image.frame.intersects(leftWallImage.frame) || bot2Image.frame.intersects(rightWallImage.frame) {
-            bot2.velocity *= -1
-        }
-        if bot3Image.frame.intersects(leftWallImage.frame) || bot3Image.frame.intersects(rightWallImage.frame) {
-            bot3.velocity *= -1
-        }
-        if bot4Image.frame.intersects(leftWallImage.frame) || bot4Image.frame.intersects(rightWallImage.frame) {
-            bot4.velocity *= -1
-        }
-        if bot5Image.frame.intersects(leftWallImage.frame) || bot5Image.frame.intersects(rightWallImage.frame) {
-            bot5.velocity *= -1
-        }
-        if bot6Image.frame.intersects(leftWallImage.frame) || bot6Image.frame.intersects(rightWallImage.frame) {
-            bot6.velocity *= -1
-        }
-        if bot7Image.frame.intersects(leftWallImage.frame) || bot7Image.frame.intersects(rightWallImage.frame) {
-            bot7.velocity *= -1
-        }
-        if bot8Image.frame.intersects(leftWallImage.frame) || bot8Image.frame.intersects(rightWallImage.frame) {
-            bot8.velocity *= -1
-        }
-        if bot9Image.frame.intersects(leftWallImage.frame) || bot9Image.frame.intersects(rightWallImage.frame) {
-            bot9.velocity *= -1
-        }
-        if bot10Image.frame.intersects(leftWallImage.frame) || bot10Image.frame.intersects(rightWallImage.frame) {
-            bot10.velocity *= -1
-        }
-        if bot11Image.frame.intersects(leftWallImage.frame) || bot11Image.frame.intersects(rightWallImage.frame) {
-            bot11.velocity *= -1
-        }
-        if bot12Image.frame.intersects(leftWallImage.frame) || bot12Image.frame.intersects(rightWallImage.frame) {
-            bot12.velocity *= -1
-        }
-        if bot13Image.frame.intersects(leftWallImage.frame) || bot13Image.frame.intersects(rightWallImage.frame) {
-            bot13.velocity *= -1
-        }
-        
-        
         
         if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
             bullet1IsInAction = false
         }
-        
-        
-        if bullet1Image.frame.intersects(bot1Image.frame) {
-            bullet1IsInAction = false
-            bot1.isInActrion = false
-            bot1Image.isHidden = true
+        //Bot itteration logic
+        for i in 0..<bots.count {
+            bots[i].image!.center = CGPoint(x: bots[i].image!.center.x + CGFloat(bots[i].velocity), y: bots[i].image!.center.y)
+            if bots[i].image!.frame.intersects(leftWallImage.frame) || bots[i].image!.frame.intersects(rightWallImage.frame) {
+                bots[i].velocity *= -1
+            }
+            if bullet1Image.frame.intersects(bots[i].image!.frame) {
+                bullet1IsInAction = false
+                bots[i].isInActrion = false
+                bots[i].image!.isHidden = true
+            }
+            if characterImage.frame.intersects(bots[i].image!.frame) && bots[i].isInActrion == true {
+                returnToMenu()
+            }
         }
         
-        if bullet1Image.frame.intersects(bot2Image.frame) {
-            bullet1IsInAction = false
-            bot2.isInActrion = false
-            bot2Image.isHidden = true
+        for i in 0..<bouncyBots.count {
+            if bouncyBots[i].image!.frame.intersects(leftWallImage.frame) || bouncyBots[i].image!.frame.intersects(rightWallImage.frame) {
+                bots[i].velocity *= -1
+            }
+            if characterImage.frame.intersects(bouncyBots[i].topRect) && bouncyBots[i].isInActrion == true {
+                upVelocityMultiplier = 10
+                downVelocityMultiplier = 0
+                NSLog("Top of bot hit")
+            }
+            if characterImage.frame.intersects(bouncyBots[i].bottomRect) && bouncyBots[i].isInActrion == true {
+                NSLog("Bottom of bot hit")
+                returnToMenu()
+            }
         }
-        
-        if bullet1Image.frame.intersects(bot3Image.frame) {
-            bullet1IsInAction = false
-            bot3.isInActrion = false
-            bot3Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot4Image.frame) {
-            bullet1IsInAction = false
-            bot4.isInActrion = false
-            bot4Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot5Image.frame) {
-            bullet1IsInAction = false
-            bot5.isInActrion = false
-            bot5Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot6Image.frame) {
-            bullet1IsInAction = false
-            bot6.isInActrion = false
-            bot6Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot7Image.frame) {
-            bullet1IsInAction = false
-            bot7.isInActrion = false
-            bot7Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot8Image.frame) {
-            bullet1IsInAction = false
-            bot8.isInActrion = false
-            bot8Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot9Image.frame) {
-            bullet1IsInAction = false
-            bot9.isInActrion = false
-            bot9Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot10Image.frame) {
-            bullet1IsInAction = false
-            bot10.isInActrion = false
-            bot10Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot11Image.frame) {
-            bullet1IsInAction = false
-            bot11.isInActrion = false
-            bot11Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot12Image.frame) {
-            bullet1IsInAction = false
-            bot12.isInActrion = false
-            bot12Image.isHidden = true
-        }
-        
-        if bullet1Image.frame.intersects(bot13Image.frame) {
-            bullet1IsInAction = false
-            bot13.isInActrion = false
-            bot13Image.isHidden = true
-        }
-        
-        if characterImage.frame.intersects(bot1Image.frame) && bot1.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot2Image.frame) && bot2.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot3Image.frame) && bot3.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot4Image.frame) && bot4.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot5Image.frame) && bot5.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot6Image.frame) && bot6.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot7Image.frame) && bot7.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot8Image.frame) && bot8.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot9Image.frame) && bot9.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot10Image.frame) && bot10.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot11Image.frame) && bot11.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot12Image.frame) && bot12.isInActrion == true {
-            returnToMenu()
-        }
-        
-        if characterImage.frame.intersects(bot13Image.frame) && bot13.isInActrion == true {
-            returnToMenu()
-        }
-        
         //        if characterImage.frame.intersects(teleportImage.frame){
         //            advanceToNextLevel()
         //        }
@@ -495,10 +346,6 @@ class LevelTwoController: UIViewController {
             return false
         }
     }
-    
-    
-    
-    
     
     func returnToMenu() {
         timer!.invalidate()
