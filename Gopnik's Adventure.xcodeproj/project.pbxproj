@@ -15,6 +15,8 @@
 		52321F9F2408A06C008E3030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52321F9D2408A06C008E3030 /* LaunchScreen.storyboard */; };
 		5259ED172428422400753354 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259ED162428422400753354 /* MainMenuController.swift */; };
 		5259ED192428423900753354 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5259ED182428423900753354 /* MainMenu.storyboard */; };
+		5284C8BC243635A8008EB575 /* LevelThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C8BB243635A8008EB575 /* LevelThreeController.swift */; };
+		5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5284C8BD243635B9008EB575 /* LevelThree.storyboard */; };
 		528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A37A3242E438100B7D642 /* LevelTwo.storyboard */; };
 		528A37A6242E439900B7D642 /* LevelTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A37A5242E439900B7D642 /* LevelTwoController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,8 @@
 		52321FA02408A06C008E3030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5259ED162428422400753354 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		5259ED182428423900753354 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
+		5284C8BB243635A8008EB575 /* LevelThreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeController.swift; sourceTree = "<group>"; };
+		5284C8BD243635B9008EB575 /* LevelThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelThree.storyboard; sourceTree = "<group>"; };
 		528A37A3242E438100B7D642 /* LevelTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelTwo.storyboard; sourceTree = "<group>"; };
 		528A37A5242E439900B7D642 /* LevelTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +85,7 @@
 				5259ED182428423900753354 /* MainMenu.storyboard */,
 				52321F982408A06B008E3030 /* LevelOne.storyboard */,
 				528A37A3242E438100B7D642 /* LevelTwo.storyboard */,
+				5284C8BD243635B9008EB575 /* LevelThree.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 				5259ED162428422400753354 /* MainMenuController.swift */,
 				52321F962408A06B008E3030 /* LevelOneController.swift */,
 				528A37A5242E439900B7D642 /* LevelTwoController.swift */,
+				5284C8BB243635A8008EB575 /* LevelThreeController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			files = (
 				52321F9F2408A06C008E3030 /* LaunchScreen.storyboard in Resources */,
 				52321F9C2408A06C008E3030 /* Assets.xcassets in Resources */,
+				5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */,
 				52321F9A2408A06B008E3030 /* LevelOne.storyboard in Resources */,
 				5259ED192428423900753354 /* MainMenu.storyboard in Resources */,
 				528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */,
@@ -173,6 +180,7 @@
 				52321F932408A06B008E3030 /* AppDelegate.swift in Sources */,
 				52321F952408A06B008E3030 /* SceneDelegate.swift in Sources */,
 				528A37A6242E439900B7D642 /* LevelTwoController.swift in Sources */,
+				5284C8BC243635A8008EB575 /* LevelThreeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

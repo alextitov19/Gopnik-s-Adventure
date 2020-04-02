@@ -329,7 +329,7 @@ class LevelTwoController: UIViewController {
         }
         
         if characterImage.frame.intersects(teleportImage.frame){
-            returnToMenu()
+            advanceToNextLevel()
         }
         
     }
@@ -380,8 +380,8 @@ class LevelTwoController: UIViewController {
     func advanceToNextLevel() {
         timer!.invalidate()
         timer = nil
-        let storyboard = UIStoryboard(name: "LevelTwo", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LevelTwoController") as UIViewController
+        let storyboard = UIStoryboard(name: "LevelThree", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelThreeController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
