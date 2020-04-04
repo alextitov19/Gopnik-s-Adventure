@@ -479,6 +479,95 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DRs-2y-xR0"/>
                     </view>
+                    <connections>
+                        <outlet property="I10BottomImage" destination="ntV-QE-Nj4" id="0TU-96-Q4n"/>
+                        <outlet property="I10RightImage" destination="Iz3-Vp-d25" id="5wA-MV-C4b"/>
+                        <outlet property="I10TopImage" destination="FI9-3x-vGd" id="grm-N1-2UV"/>
+                        <outlet property="I11BottomImage" destination="Gph-dc-gJM" id="CBE-zV-e0c"/>
+                        <outlet property="I11LeftImage" destination="QOg-AD-NzT" id="mbO-kD-8g1"/>
+                        <outlet property="I11TopImage" destination="K94-Oi-OUP" id="j06-IJ-bMa"/>
+                        <outlet property="I12BottomImage" destination="bcu-JO-oSJ" id="FCW-0A-q5N"/>
+                        <outlet property="I12RightImage" destination="w5d-s9-gDy" id="OwJ-Ih-ihK"/>
+                        <outlet property="I12TopImage" destination="7Pb-74-PYW" id="3Kp-3S-fZm"/>
+                        <outlet property="I13BottomImage" destination="fhh-EZ-2cw" id="gWV-pJ-Qne"/>
+                        <outlet property="I13LeftImage" destination="OGK-DW-yaa" id="GRC-eY-1lo"/>
+                        <outlet property="I13TopImage" destination="UP0-oo-b8F" id="KTX-62-THa"/>
+                        <outlet property="I14BottomImage" destination="ag7-NX-YSp" id="ybo-8Z-9S3"/>
+                        <outlet property="I14RightImage" destination="PJc-En-Ecm" id="ATS-oX-s2E"/>
+                        <outlet property="I14TopImage" destination="g9X-RJ-G0V" id="eac-eP-P92"/>
+                        <outlet property="I15BottomImage" destination="284-sk-P1l" id="f5M-4O-asD"/>
+                        <outlet property="I15LeftImage" destination="BRm-XN-5jW" id="ywF-wJ-CNY"/>
+                        <outlet property="I15TopImage" destination="h3k-Lq-5Vr" id="pTt-5u-Y55"/>
+                        <outlet property="I16BottomImage" destination="iud-Dd-fbo" id="bj8-BN-Dvj"/>
+                        <outlet property="I16RightImage" destination="wvK-Rc-08Z" id="KoU-Js-gHh"/>
+                        <outlet property="I16TopImage" destination="42j-7i-Td2" id="Y85-EJ-s3h"/>
+                        <outlet property="I17BottomImage" destination="9rQ-d9-lml" id="JPv-K6-tX3"/>
+                        <outlet property="I17LeftImage" destination="Lx3-qG-86d" id="h8A-Kz-2gk"/>
+                        <outlet property="I17TopImage" destination="sUi-qD-jDP" id="Jpt-z9-d05"/>
+                        <outlet property="I18BottomImage" destination="QON-2n-FgU" id="W9U-xx-qzG"/>
+                        <outlet property="I18RightImage" destination="wD7-on-OhB" id="koS-da-l4E"/>
+                        <outlet property="I18TopImage" destination="ezE-Ck-Drf" id="mPH-E5-Dbn"/>
+                        <outlet property="I19BottomImage" destination="vJZ-37-V3K" id="noX-TE-Hlc"/>
+                        <outlet property="I19LeftImage" destination="siS-tE-i3t" id="VPU-TM-i5D"/>
+                        <outlet property="I19TopImage" destination="U1b-b2-kSO" id="tFm-yJ-rcD"/>
+                        <outlet property="I1BottomImage" destination="ABo-1Q-REv" id="wfk-SJ-8aD"/>
+                        <outlet property="I1RightImage" destination="bsS-iu-9mA" id="Oo2-RC-11u"/>
+                        <outlet property="I1TopImage" destination="FGe-F6-Qgt" id="Uxa-DF-AKM"/>
+                        <outlet property="I20BottomImage" destination="4zf-mf-6LC" id="VTD-vL-Txf"/>
+                        <outlet property="I20RightImage" destination="Uv4-eN-3v8" id="pNU-Hs-hDi"/>
+                        <outlet property="I20TopImage" destination="Ztc-bO-LFX" id="Lex-ov-wFB"/>
+                        <outlet property="I21BottomImage" destination="gjG-TS-iEm" id="zFH-SH-jdx"/>
+                        <outlet property="I21LeftImage" destination="Llt-mg-2dB" id="4pM-WM-fdw"/>
+                        <outlet property="I21TopImage" destination="ZHW-LU-P5o" id="eBA-QG-x0D"/>
+                        <outlet property="I22BottomImage" destination="fOr-tP-3ha" id="mhA-AP-N0k"/>
+                        <outlet property="I22RightImage" destination="R7y-qt-QQd" id="hmq-wX-1Pd"/>
+                        <outlet property="I22TopImage" destination="FJC-VQ-prS" id="qLc-AM-myF"/>
+                        <outlet property="I23BottomImage" destination="T76-od-4gT" id="KJw-1W-I1L"/>
+                        <outlet property="I23RightImage" destination="iMT-9A-iOd" id="5OX-KV-Zv0"/>
+                        <outlet property="I23TopImage" destination="NJf-SK-Tw6" id="WyK-vu-BNz"/>
+                        <outlet property="I24BottomImage" destination="lH6-TL-4zt" id="FkF-c4-Gua"/>
+                        <outlet property="I24LeftImage" destination="RNy-hf-mN3" id="Tct-Ks-Ddh"/>
+                        <outlet property="I24TopImage" destination="LwQ-Bh-52r" id="KFE-da-VeV"/>
+                        <outlet property="I25BottomImage" destination="bmu-sE-NqL" id="2Ar-c1-bxj"/>
+                        <outlet property="I25RightImage" destination="SZA-Dg-8LD" id="dYV-TO-hMf"/>
+                        <outlet property="I25TopImage" destination="a81-Kg-thM" id="xjl-yL-xUc"/>
+                        <outlet property="I26BottomImage" destination="QDC-VT-OxS" id="A2T-Ki-ZPP"/>
+                        <outlet property="I26RightImage" destination="tvq-QN-a0U" id="bQy-8W-AH6"/>
+                        <outlet property="I26TopImage" destination="y2C-bq-M9w" id="UOn-eC-lJh"/>
+                        <outlet property="I27BottomImage" destination="3ZY-9B-NZA" id="bcB-px-zKZ"/>
+                        <outlet property="I27LeftImage" destination="gaS-dE-mvY" id="V3f-3J-sBG"/>
+                        <outlet property="I27TopImage" destination="Rwt-YM-SeT" id="e0z-cu-654"/>
+                        <outlet property="I28BottomImage" destination="cW6-7Y-HaV" id="lNU-lM-ROy"/>
+                        <outlet property="I28RightImage" destination="wHX-p1-rT6" id="Thr-fm-iU1"/>
+                        <outlet property="I28TopImage" destination="504-oM-ZXE" id="6zi-au-CZD"/>
+                        <outlet property="I29BottomImage" destination="Mwe-bZ-gZr" id="u7S-7K-ViI"/>
+                        <outlet property="I29LeftImage" destination="14j-gj-zTO" id="8PE-dq-WxN"/>
+                        <outlet property="I29TopImage" destination="oMH-yc-yCc" id="pmw-PU-KOE"/>
+                        <outlet property="I2BottomImage" destination="1IQ-bM-a9k" id="ml3-Cc-XmX"/>
+                        <outlet property="I2LeftImage" destination="ccI-3C-Cli" id="1gM-2A-dor"/>
+                        <outlet property="I2TopImage" destination="Lfw-Tu-VuV" id="wLu-cD-Exj"/>
+                        <outlet property="I3BottomImage" destination="CKf-S6-r9E" id="cHr-pI-YnH"/>
+                        <outlet property="I3RightImage" destination="2ST-r5-4EX" id="Kla-wc-Eht"/>
+                        <outlet property="I3TopImage" destination="6fe-JG-xPa" id="qeI-e8-0ZI"/>
+                        <outlet property="I4BottomImage" destination="nEE-B1-inV" id="4Ti-m2-BPD"/>
+                        <outlet property="I4LeftImage" destination="ko6-hk-12v" id="w8D-eC-ig2"/>
+                        <outlet property="I4TopImage" destination="oQx-10-YWC" id="heM-NT-Vcw"/>
+                        <outlet property="I5BottomImage" destination="ETd-ln-8to" id="JuN-Zf-nYy"/>
+                        <outlet property="I5RightImage" destination="eg0-Iw-4NM" id="bR2-9D-s46"/>
+                        <outlet property="I5TopImage" destination="dAi-aq-O09" id="shh-5D-EgD"/>
+                        <outlet property="I6BottomImage" destination="ZaC-T9-uzo" id="4eV-AD-drt"/>
+                        <outlet property="I6LeftImage" destination="q8E-Gg-hme" id="Qcv-sc-k8N"/>
+                        <outlet property="I6TopImage" destination="bu5-I9-n08" id="MTb-Ly-1Cg"/>
+                        <outlet property="I7BottomImage" destination="k4z-Yt-Bn1" id="jZh-0o-YHj"/>
+                        <outlet property="I7RightImage" destination="AvW-A1-sYr" id="Q75-F1-Jue"/>
+                        <outlet property="I7TopImage" destination="58O-p2-sRx" id="oqr-kr-FMQ"/>
+                        <outlet property="I8BottomImage" destination="GIE-El-n90" id="sIh-mR-v20"/>
+                        <outlet property="I8LeftImage" destination="TWl-cj-yXb" id="FMI-zW-cHZ"/>
+                        <outlet property="I8Topimage" destination="c6Z-AX-oHt" id="yYt-eR-feB"/>
+                        <outlet property="I9BottomImage" destination="JCy-M2-slA" id="ldg-W1-jIB"/>
+                        <outlet property="I9RightImage" destination="1M6-fJ-bP8" id="axQ-MT-a4b"/>
+                        <outlet property="I9TopImage" destination="gPb-K9-TuM" id="Usb-M4-rLc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSB-rn-Phg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
