@@ -125,18 +125,32 @@ class LevelThreeController: UIViewController {
     @IBOutlet var I29BottomImage: UIImageView!
     @IBOutlet var I29LeftImage: UIImageView!
     
+    @IBOutlet var characterImage: UIImageView!
+    
+    @IBOutlet var bulletImage: UIImageView!
+    
+    @IBOutlet var upButton: UIButton!
     
     
     
     
     
+    @IBAction func upButtonTapped(_ sender: UIButton) {
+    }
     
     
+    @IBAction func leftLongPress(_ sender: UILongPressGestureRecognizer) {
+    }
+    
+    @IBAction func downLongPress(_ sender: UILongPressGestureRecognizer) {
+    }
     
     
+    @IBAction func rightLongPress(_ sender: UILongPressGestureRecognizer) {
+    }
     
-    
-    
+    @IBAction func fireButtonTapped(_ sender: UIButton) {
+    }
     
     
 }
