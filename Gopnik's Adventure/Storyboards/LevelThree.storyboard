@@ -626,27 +626,31 @@
                         <outlet property="I7TopImage" destination="58O-p2-sRx" id="oqr-kr-FMQ"/>
                         <outlet property="I8BottomImage" destination="GIE-El-n90" id="sIh-mR-v20"/>
                         <outlet property="I8LeftImage" destination="TWl-cj-yXb" id="FMI-zW-cHZ"/>
-                        <outlet property="I8Topimage" destination="c6Z-AX-oHt" id="yYt-eR-feB"/>
+                        <outlet property="I8TopImage" destination="c6Z-AX-oHt" id="yYt-eR-feB"/>
                         <outlet property="I9BottomImage" destination="JCy-M2-slA" id="ldg-W1-jIB"/>
                         <outlet property="I9RightImage" destination="1M6-fJ-bP8" id="axQ-MT-a4b"/>
                         <outlet property="I9TopImage" destination="gPb-K9-TuM" id="Usb-M4-rLc"/>
-                        <outlet property="bulletImage" destination="Dio-xh-SBu" id="paC-42-aFS"/>
+                        <outlet property="bottomWallImage" destination="mf1-3A-2PT" id="g9x-Eu-h0L"/>
+                        <outlet property="bullet1Image" destination="Dio-xh-SBu" id="paC-42-aFS"/>
                         <outlet property="characterImage" destination="e2y-Ao-C7c" id="qf5-XB-BKE"/>
+                        <outlet property="leftWallImage" destination="3Sy-4f-7yt" id="Zw9-4m-rGi"/>
+                        <outlet property="rightWallImage" destination="m8f-PR-Wbd" id="cmQ-2b-tlV"/>
+                        <outlet property="topWallImage" destination="9rh-hq-1u7" id="8aW-Zi-dXp"/>
                         <outlet property="upButton" destination="IUV-Hj-vdG" id="bxF-zn-Gw8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSB-rn-Phg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wiu-Ih-Vw4">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="wiu-Ih-Vw4">
                     <connections>
                         <action selector="leftLongPress:" destination="NnJ-jq-r5m" id="mmk-E8-95X"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="slN-M4-itq">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="slN-M4-itq">
                     <connections>
                         <action selector="downLongPress:" destination="NnJ-jq-r5m" id="Ofw-HX-UYo"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Kal-00-6O0">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="Kal-00-6O0">
                     <connections>
                         <action selector="rightLongPress:" destination="NnJ-jq-r5m" id="qr0-r0-Ykc"/>
                     </connections>
