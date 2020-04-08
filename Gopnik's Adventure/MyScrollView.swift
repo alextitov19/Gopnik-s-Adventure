@@ -9,12 +9,11 @@
 import UIKit
 
 class MyScrollView: UIScrollView {
-
     @IBAction func handlePan(_ recognizer: UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self)
-        bounds.origin.y = bounds.origin.y - translation.y
         bounds.origin.x = bounds.origin.x - translation.x
-        
+        bounds.origin.y = bounds.origin.y - translation.y
+
         recognizer.setTranslation(CGPoint.zero, in: self)
     }
 

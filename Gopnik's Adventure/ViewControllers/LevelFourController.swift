@@ -10,6 +10,8 @@ import UIKit
 
 class LevelFourController: UIViewController {
     
+    @IBOutlet var MainScrollView: MyScrollView!
+    
     @IBOutlet var bottomWallImage: UIImageView!
     @IBOutlet var leftWallImage: UIImageView!
     @IBOutlet var rightWallImage: UIImageView!
@@ -37,6 +39,8 @@ class LevelFourController: UIViewController {
     var downVelocity: Double = 0.1
     var characterLocationX: Double = 0.0
     var characterLocationY: Double = 0.0
+    var previousCharacterLocationX: Double = 0.0
+    var previousCharacterLocationY: Double = 0.0
     var downTouchesEnded: Bool = true
     var leftTouchesEnded: Bool = true
     var rightTouchesEnded: Bool = true
@@ -55,6 +59,8 @@ class LevelFourController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
+        MainScrollView.bounds.origin.x = characterImage.bounds.origin.x
+        MainScrollView.bounds.origin.y = characterImage.bounds.origin.y
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
     }
@@ -108,13 +114,16 @@ class LevelFourController: UIViewController {
         upButton.isUserInteractionEnabled = true
     }
     
+    previousCharacterLocationX = characterLocationX
+    previousCharacterLocationY = characterLocationY
     
     characterImage.center = CGPoint(x: characterLocationX + (rightVelocity * rightVelocityMultiplier) - (leftVelocity * leftVelocityMultiplier), y:characterLocationY + (downVelocity * downVelocityMultiplier) - (upVelocity * upVelocityMultiplier))
     
     characterLocationX = Double(characterImage.center.x)
     characterLocationY = Double(characterImage.center.y)
         
-        
+        MainScrollView.bounds.origin.x = MainScrollView.bounds.origin.x + CGFloat((characterLocationX - previousCharacterLocationX))
+        MainScrollView.bounds.origin.y = MainScrollView.bounds.origin.y + CGFloat((characterLocationY - previousCharacterLocationY))
     }
     
     
