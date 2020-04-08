@@ -12,7 +12,7 @@
             <objects>
                 <viewController storyboardIdentifier="LevelFourController" id="iLd-7K-uuA" customClass="LevelFourController" customModule="Gopnik_s_Adventure" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UEf-iF-cHe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-RR-IjS" customClass="MyScrollView" customModule="Gopnik_s_Adventure" customModuleProvider="target">
@@ -369,6 +369,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ExV-ig-pWV">
+                                        <rect key="frame" x="491" y="1934" width="15" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -378,18 +383,74 @@
                                     <outletCollection property="gestureRecognizers" destination="ZUY-26-3sf" appends="YES" id="ku6-mz-P4G"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qay-Hy-tbz">
-                                <rect key="frame" x="40" y="821" width="75" height="35"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-HP-u3y">
+                                <rect key="frame" x="0.0" y="780" width="418" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yMc-Xb-ar3">
+                                <rect key="frame" x="10" y="820" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Left">
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5Se-yu-F1F" appends="YES" id="HYf-cT-nhd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kbi-Ny-X8T">
+                                <rect key="frame" x="150" y="820" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Right">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aT1-xW-WEv" appends="YES" id="IRx-84-yqj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wet-VA-7aV">
+                                <rect key="frame" x="80" y="790" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="upButtonTapped:" destination="iLd-7K-uuA" eventType="touchUpInside" id="mqM-sS-ZTw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qay-Hy-tbz">
+                                <rect key="frame" x="80" y="850" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2bZ-kH-kMb" appends="YES" id="DtC-A9-GXP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9Oz-rv-jRC"/>
                     </view>
+                    <size key="freeformSize" width="1000" height="2000"/>
+                    <connections>
+                        <outlet property="I1BottomImage" destination="CBs-ef-RyZ" id="gyH-49-ceh"/>
+                        <outlet property="I1RightImage" destination="yTL-Vf-28j" id="izs-BD-Ef2"/>
+                        <outlet property="I1TopImage" destination="eHh-kz-2Jk" id="Cud-15-83D"/>
+                        <outlet property="bottomWallImage" destination="8l6-7V-amP" id="Qqw-ec-nD5"/>
+                        <outlet property="characterImage" destination="ExV-ig-pWV" id="SOs-8m-go9"/>
+                        <outlet property="leftWallImage" destination="7FK-ez-Ko6" id="m5v-9o-azD"/>
+                        <outlet property="rightWallImage" destination="TwL-1I-nrx" id="VAx-ox-2aI"/>
+                        <outlet property="topWallImage" destination="n86-vE-DB0" id="9fb-e3-k1c"/>
+                        <outlet property="upButton" destination="wet-VA-7aV" id="FVs-eT-pZ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zlg-D3-1ik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="ZUY-26-3sf">
@@ -397,6 +458,21 @@
                         <action selector="handlePan:" destination="SEt-RR-IjS" id="clG-y7-VqA"/>
                     </connections>
                 </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5Se-yu-F1F">
+                    <connections>
+                        <action selector="leftLongPress:" destination="iLd-7K-uuA" id="l0I-ha-K3F"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2bZ-kH-kMb">
+                    <connections>
+                        <action selector="downLongPress:" destination="iLd-7K-uuA" id="rbV-O2-Xbp"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.0001" id="aT1-xW-WEv">
+                    <connections>
+                        <action selector="rightLongPress:" destination="iLd-7K-uuA" id="3ZV-Fb-Ys4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2.8985507246376816" y="118.52678571428571"/>
         </scene>
