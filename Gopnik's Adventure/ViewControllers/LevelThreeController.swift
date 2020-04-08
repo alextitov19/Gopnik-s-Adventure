@@ -137,6 +137,29 @@ class LevelThreeController: UIViewController {
     
     @IBOutlet var upButton: UIButton!
     
+    @IBOutlet var bot1Image: UIImageView!
+    @IBOutlet var bot2Image: UIImageView!
+    @IBOutlet var bot3Image: UIImageView!
+    @IBOutlet var bot4Image: UIImageView!
+    @IBOutlet var bot5Image: UIImageView!
+    @IBOutlet var bot6Image: UIImageView!
+    @IBOutlet var bot7Image: UIImageView!
+    @IBOutlet var bot8Image: UIImageView!
+    @IBOutlet var bot9Image: UIImageView!
+    @IBOutlet var bot10Image: UIImageView!
+    @IBOutlet var bot11Image: UIImageView!
+    @IBOutlet var bot12Image: UIImageView!
+    @IBOutlet var bot13Image: UIImageView!
+    @IBOutlet var bot14Image: UIImageView!
+    @IBOutlet var bot15Image: UIImageView!
+    @IBOutlet var bot16Image: UIImageView!
+    @IBOutlet var bot17Image: UIImageView!
+    @IBOutlet var bot18Image: UIImageView!
+    @IBOutlet var bot19Image: UIImageView!
+    
+    
+    
+    
     var rightVelocityMultiplier: Double = 0.0
     var leftVelocityMultiplier: Double = 0.0
     var upVelocityMultiplier: Double = 0.0
@@ -160,13 +183,41 @@ class LevelThreeController: UIViewController {
     
     var timer: Timer?
     
+    var bots: [Bot] = []
+    var bot1 = Bot()
+    var bot2 = Bot()
+    var bot3 = Bot()
+    var bot4 = Bot()
+    var bot5 = Bot()
+    var bot6 = Bot()
+    var bot7 = Bot()
+    var bot8 = Bot()
+    var bot9 = Bot()
+    var bot10 = Bot()
+    var bot11 = Bot()
+    var bot12 = Bot()
+    var bot13 = Bot()
+    var bot14 = Bot()
+    var bot15 = Bot()
+    var bot16 = Bot()
+    var bot17 = Bot()
+    var bot18 = Bot()
+    var bot19 = Bot()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-
+        bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13, bot14, bot15, bot16, bot17, bot18, bot19]
+        let botImages = [bot1Image, bot2Image, bot3Image, bot4Image, bot5Image, bot6Image, bot7Image, bot8Image, bot9Image, bot10Image, bot11Image, bot12Image, bot13Image, bot14Image, bot15Image, bot16Image, bot17Image, bot18Image, bot19Image]
+        for i in 0..<bots.count {
+            bots[i].isInActrion = true
+            bots[i].velocity = 0.25 + (Double.random(in: -0.1..<0.1))
+            bots[i].image = botImages[i]
+        }
+        
     }
     
     
@@ -224,6 +275,21 @@ class LevelThreeController: UIViewController {
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
         
+        for i in 0..<bots.count {
+            bots[i].image!.center = CGPoint(x: bots[i].image!.center.x + CGFloat(bots[i].velocity), y: bots[i].image!.center.y)
+            if bots[i].image!.frame.intersects(leftWallImage.frame) || bots[i].image!.frame.intersects(rightWallImage.frame) {
+                bots[i].velocity *= -1
+            }
+            if bullet1Image.frame.intersects(bots[i].image!.frame) {
+                bullet1IsInAction = false
+                bots[i].isInActrion = false
+                bots[i].image!.isHidden = true
+            }
+            if characterImage.frame.intersects(bots[i].image!.frame) && bots[i].isInActrion == true {
+                returnToMenu()
+            }
+        }
+        
         
         if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
             bullet1IsInAction = false
@@ -259,7 +325,7 @@ class LevelThreeController: UIViewController {
     }
     //top border hit
     func topBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame)) {
+        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame) || frame.intersects(I22TopImage.frame) || frame.intersects(I23TopImage.frame) || frame.intersects(I24TopImage.frame) || frame.intersects(I25TopImage.frame) || frame.intersects(I26TopImage.frame) || frame.intersects(I27TopImage.frame) || frame.intersects(I28TopImage.frame) || frame.intersects(I29TopImage.frame)) {
             return true
         } else {
             return false
@@ -267,7 +333,7 @@ class LevelThreeController: UIViewController {
     }
     //bottom border hit
     func bottomBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame) || frame.intersects(I17BottomImage.frame) || frame.intersects(I18BottomImage.frame) || frame.intersects(I19BottomImage.frame) || frame.intersects(I20BottomImage.frame) || frame.intersects(I21BottomImage.frame)) {
+        if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame) || frame.intersects(I17BottomImage.frame) || frame.intersects(I18BottomImage.frame) || frame.intersects(I19BottomImage.frame) || frame.intersects(I20BottomImage.frame) || frame.intersects(I21BottomImage.frame) || frame.intersects(I22BottomImage.frame) || frame.intersects(I23BottomImage.frame) || frame.intersects(I24BottomImage.frame) || frame.intersects(I25BottomImage.frame) || frame.intersects(I26BottomImage.frame) || frame.intersects(I27BottomImage.frame) || frame.intersects(I28BottomImage.frame) || frame.intersects(I29BottomImage.frame)) {
             return true
         } else {
             return false
@@ -278,7 +344,6 @@ class LevelThreeController: UIViewController {
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
         upVelocityMultiplier = 5
-        
     }
     
     
@@ -316,5 +381,23 @@ class LevelThreeController: UIViewController {
         bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
     }
     
+    func returnToMenu() {
+        timer!.invalidate()
+        timer = nil
+        let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func advanceToNextLevel() {
+        timer!.invalidate()
+        timer = nil
+        let storyboard = UIStoryboard(name: "LevelThree", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelThreeController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
     
 }
+

@@ -380,8 +380,8 @@ class LevelTwoController: UIViewController {
     func advanceToNextLevel() {
         timer!.invalidate()
         timer = nil
-        let storyboard = UIStoryboard(name: "LevelThree", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "LevelThreeController") as UIViewController
+        let storyboard = UIStoryboard(name: "LevelFour", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelFourController") as UIViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
