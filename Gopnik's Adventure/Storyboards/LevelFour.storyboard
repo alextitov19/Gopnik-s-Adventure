@@ -516,9 +516,45 @@
                         <outlet property="I14BottomImage" destination="ZxV-lR-9wM" id="JOe-OC-y9y"/>
                         <outlet property="I14RightImage" destination="Aqj-qa-LIi" id="H2V-ys-dup"/>
                         <outlet property="I14TopImage" destination="3hi-Bm-qXz" id="us5-Bq-fmd"/>
+                        <outlet property="I15BottomImage" destination="GiU-IP-RHc" id="SO3-rK-Cdh"/>
+                        <outlet property="I15LeftImage" destination="XJV-yk-BKA" id="fAe-Ip-bnO"/>
+                        <outlet property="I15TopImage" destination="7d7-he-UA5" id="T3d-8H-wv3"/>
+                        <outlet property="I16BottomImage" destination="S7c-gH-xIs" id="cAz-Oh-7f2"/>
+                        <outlet property="I16RightImage" destination="9Pp-MQ-EFw" id="UK3-LU-riv"/>
+                        <outlet property="I16TopImage" destination="PLX-n2-639" id="2RE-33-ZAv"/>
+                        <outlet property="I17BottomImage" destination="21b-TG-7Zg" id="SpG-Qh-5vI"/>
+                        <outlet property="I17LeftImage" destination="qZf-Lz-pGW" id="EUx-Rk-HhJ"/>
+                        <outlet property="I17TopImage" destination="2j6-o2-0ME" id="QrE-5z-xCq"/>
+                        <outlet property="I18BottomImage" destination="sHr-fa-FVD" id="RfQ-hp-mGB"/>
+                        <outlet property="I18RightImage" destination="1GW-I7-bb8" id="r1c-UD-ba5"/>
+                        <outlet property="I18TopImage" destination="F7O-EH-fAj" id="cJc-6Y-w9j"/>
+                        <outlet property="I19BottomImage" destination="T2Y-Pk-89p" id="SNk-QT-z2R"/>
+                        <outlet property="I19LeftImage" destination="jG0-FY-ALD" id="K58-YA-Yqk"/>
+                        <outlet property="I19TopImage" destination="dHX-QC-yu2" id="90L-bt-6C0"/>
                         <outlet property="I1BottomImage" destination="CBs-ef-RyZ" id="gyH-49-ceh"/>
                         <outlet property="I1RightImage" destination="yTL-Vf-28j" id="izs-BD-Ef2"/>
                         <outlet property="I1TopImage" destination="eHh-kz-2Jk" id="Cud-15-83D"/>
+                        <outlet property="I20BottomImage" destination="Av3-d6-SgC" id="tKb-76-zMe"/>
+                        <outlet property="I20RightImage" destination="aYE-so-axC" id="oQy-e7-EVu"/>
+                        <outlet property="I20TopImage" destination="DEU-Xt-Etb" id="sx6-AX-ExH"/>
+                        <outlet property="I21BottomImage" destination="nT2-DN-aGa" id="Fk5-2f-AVD"/>
+                        <outlet property="I21LeftImage" destination="dYo-Qi-P4q" id="ydm-AF-tLg"/>
+                        <outlet property="I21TopImage" destination="NPP-Ho-MYx" id="ecg-KZ-g2Y"/>
+                        <outlet property="I22BottomImage" destination="LsE-HD-Q1A" id="t3E-v9-uFF"/>
+                        <outlet property="I22RightImage" destination="uaG-Rw-PBG" id="NwI-OH-bXT"/>
+                        <outlet property="I22TopImage" destination="Mwq-ek-hE6" id="ZM5-ij-ux6"/>
+                        <outlet property="I23BottomImage" destination="Bcp-h9-n2b" id="hme-Eb-KiR"/>
+                        <outlet property="I23LeftImage" destination="O0r-jq-BEc" id="pCo-DP-FbB"/>
+                        <outlet property="I23TopImage" destination="6o1-lA-0CM" id="WwV-yv-dNS"/>
+                        <outlet property="I24BottomImage" destination="5ui-mg-mHy" id="Wd3-kg-5wc"/>
+                        <outlet property="I24LeftImage" destination="wrD-4f-fbl" id="Jei-O3-HXV"/>
+                        <outlet property="I24TopImage" destination="uzs-uM-9wu" id="osc-Ls-DYk"/>
+                        <outlet property="I25BottomImage" destination="IMk-zU-GAK" id="Inj-lN-PEk"/>
+                        <outlet property="I25RightImage" destination="JfI-cc-cU5" id="Gys-ib-XgA"/>
+                        <outlet property="I25TopImage" destination="NCa-Uv-nlK" id="vSH-Co-NbY"/>
+                        <outlet property="I26BottomImage" destination="YIX-ne-2GO" id="0LA-4m-WV4"/>
+                        <outlet property="I26LeftImage" destination="Rji-64-7sE" id="4sz-Mu-Rp2"/>
+                        <outlet property="I26TopImage" destination="Mfh-Nf-MxN" id="3IY-ZN-W6c"/>
                         <outlet property="I2BottomImage" destination="fMK-mO-Tn6" id="spn-6T-H7r"/>
                         <outlet property="I2LeftImage" destination="Dwo-Iy-dfd" id="t3O-8R-NiZ"/>
                         <outlet property="I2TopImage" destination="ax4-Nz-KgK" id="Z7k-xr-hUI"/>
