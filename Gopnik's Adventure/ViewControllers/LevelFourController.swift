@@ -167,8 +167,8 @@ class LevelFourController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(selector), userInfo: nil, repeats: true)
-        MainScrollView.bounds.origin.x = characterImage.bounds.origin.x
-        MainScrollView.bounds.origin.y = characterImage.bounds.origin.y
+        MainScrollView.bounds.origin.x = CGFloat(-102)
+        MainScrollView.bounds.origin.y = CGFloat(1470)
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
     }
