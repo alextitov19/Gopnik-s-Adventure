@@ -21,6 +21,42 @@ class LevelFourController: UIViewController {
     @IBOutlet var I1BottomImage: UIImageView!
     @IBOutlet var I1RightImage: UIImageView!
     
+    @IBOutlet var I2TopImage: UIImageView!
+    @IBOutlet var I2BottomImage: UIImageView!
+    @IBOutlet var I2LeftImage: UIImageView!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -167,7 +203,7 @@ class LevelFourController: UIViewController {
      
      
      @IBAction func upButtonTapped(_ sender: UIButton) {
-         upVelocityMultiplier = 5
+        upVelocityMultiplier = 7.2
      }
      
      
