@@ -25,17 +25,53 @@ class LevelFourController: UIViewController {
     @IBOutlet var I2BottomImage: UIImageView!
     @IBOutlet var I2LeftImage: UIImageView!
     
+    @IBOutlet var I3TopImage: UIImageView!
+    @IBOutlet var I3BottomImage: UIImageView!
+    @IBOutlet var I3RightImage: UIImageView!
     
+    @IBOutlet var I4TopImage: UIImageView!
+    @IBOutlet var I4BottomImage: UIImageView!
+    @IBOutlet var I4LeftImage: UIImageView!
     
+    @IBOutlet var I5TopImage: UIImageView!
+    @IBOutlet var I5BottomImage: UIImageView!
+    @IBOutlet var I5RightImage: UIImageView!
     
+    @IBOutlet var I6TopImage: UIImageView!
+    @IBOutlet var I6BottomImage: UIImageView!
+    @IBOutlet var I6LeftImage: UIImageView!
     
+    @IBOutlet var I7TopImage: UIImageView!
+    @IBOutlet var I7BottomImage: UIImageView!
+    @IBOutlet var I7RightImage: UIImageView!
     
+    @IBOutlet var I8TopImage: UIImageView!
+    @IBOutlet var I8BottomImage: UIImageView!
+    @IBOutlet var I8LeftImage: UIImageView!
     
+    @IBOutlet var I9TopImage: UIImageView!
+    @IBOutlet var I9BottomImage: UIImageView!
+    @IBOutlet var I9RightImage: UIImageView!
     
+    @IBOutlet var I10TopImage: UIImageView!
+    @IBOutlet var I10BottomImage: UIImageView!
+    @IBOutlet var I10LeftImage: UIImageView!
     
+    @IBOutlet var I11TopImage: UIImageView!
+    @IBOutlet var I11BottomImage: UIImageView!
+    @IBOutlet var I11RightImage: UIImageView!
     
+    @IBOutlet var I12TopImage: UIImageView!
+    @IBOutlet var I12BottomImage: UIImageView!
+    @IBOutlet var I12LeftImage: UIImageView!
     
+    @IBOutlet var I13TopImage: UIImageView!
+    @IBOutlet var I13BottomImage: UIImageView!
+    @IBOutlet var I13LeftImage: UIImageView!
     
+    @IBOutlet var I14TopImage: UIImageView!
+    @IBOutlet var I14BottomImage: UIImageView!
+    @IBOutlet var I14RightImage: UIImageView!
     
     
     

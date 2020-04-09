@@ -270,17 +270,12 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCJ-D9-YtB">
-                                        <rect key="frame" x="200" y="1302" width="800" height="8"/>
+                                        <rect key="frame" x="200" y="1300" width="800" height="8"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QY9-p8-WXT">
                                         <rect key="frame" x="200" y="1290" width="800" height="8"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gws-6s-m9d">
-                                        <rect key="frame" x="200" y="1295" width="2" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
@@ -434,6 +429,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gws-6s-m9d">
+                                        <rect key="frame" x="200" y="1293" width="2" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -501,12 +501,48 @@
                     </view>
                     <size key="freeformSize" width="1000" height="2000"/>
                     <connections>
+                        <outlet property="I10BottomImage" destination="fCJ-D9-YtB" id="RsU-6I-tOC"/>
+                        <outlet property="I10LeftImage" destination="gws-6s-m9d" id="hDu-80-Hg3"/>
+                        <outlet property="I10TopImage" destination="QY9-p8-WXT" id="LI6-hl-u7A"/>
+                        <outlet property="I11BottomImage" destination="Pc9-UO-dsg" id="G9B-eu-chI"/>
+                        <outlet property="I11RightImage" destination="PHR-od-Wvk" id="kjW-KE-cFV"/>
+                        <outlet property="I11TopImage" destination="CLU-rw-OsL" id="2L4-Bj-pYQ"/>
+                        <outlet property="I12BottomImage" destination="gBj-sA-Tz9" id="TW6-ep-qnD"/>
+                        <outlet property="I12LeftImage" destination="KQF-jW-2tM" id="fSM-gN-9uM"/>
+                        <outlet property="I12TopImage" destination="rgu-au-g4g" id="8S4-OT-qEk"/>
+                        <outlet property="I13BottomImage" destination="NLx-gg-4Yh" id="lE7-tN-7cb"/>
+                        <outlet property="I13LeftImage" destination="mx9-3j-rgs" id="SaQ-Vs-98z"/>
+                        <outlet property="I13TopImage" destination="rQH-s3-5Ay" id="UYN-JT-amG"/>
+                        <outlet property="I14BottomImage" destination="ZxV-lR-9wM" id="JOe-OC-y9y"/>
+                        <outlet property="I14RightImage" destination="Aqj-qa-LIi" id="H2V-ys-dup"/>
+                        <outlet property="I14TopImage" destination="3hi-Bm-qXz" id="us5-Bq-fmd"/>
                         <outlet property="I1BottomImage" destination="CBs-ef-RyZ" id="gyH-49-ceh"/>
                         <outlet property="I1RightImage" destination="yTL-Vf-28j" id="izs-BD-Ef2"/>
                         <outlet property="I1TopImage" destination="eHh-kz-2Jk" id="Cud-15-83D"/>
                         <outlet property="I2BottomImage" destination="fMK-mO-Tn6" id="spn-6T-H7r"/>
                         <outlet property="I2LeftImage" destination="Dwo-Iy-dfd" id="t3O-8R-NiZ"/>
                         <outlet property="I2TopImage" destination="ax4-Nz-KgK" id="Z7k-xr-hUI"/>
+                        <outlet property="I3BottomImage" destination="Q3r-UN-Px2" id="R9c-24-HeC"/>
+                        <outlet property="I3RightImage" destination="g00-En-QLB" id="7At-nV-LLX"/>
+                        <outlet property="I3TopImage" destination="fui-Lz-CCp" id="0Rh-eh-9Va"/>
+                        <outlet property="I4BottomImage" destination="SvK-OL-uHd" id="eqA-cL-XO6"/>
+                        <outlet property="I4LeftImage" destination="dKT-Ou-kbX" id="1WG-OP-xpY"/>
+                        <outlet property="I4TopImage" destination="Njo-8I-kON" id="Va8-Ls-A45"/>
+                        <outlet property="I5BottomImage" destination="cH9-qq-xOL" id="wXl-IP-48G"/>
+                        <outlet property="I5RightImage" destination="ceq-Wt-el7" id="8pu-DR-krk"/>
+                        <outlet property="I5TopImage" destination="B2o-FF-NAp" id="GCU-dS-MVV"/>
+                        <outlet property="I6BottomImage" destination="oRs-Yh-rz7" id="Sck-ot-1d3"/>
+                        <outlet property="I6LeftImage" destination="Gcx-ni-qSJ" id="8Hb-ii-OCA"/>
+                        <outlet property="I6TopImage" destination="pLO-As-8Zp" id="Qdc-is-5VC"/>
+                        <outlet property="I7BottomImage" destination="sTa-JJ-d55" id="6zs-6g-LRf"/>
+                        <outlet property="I7RightImage" destination="MaD-lH-j7D" id="mO5-yt-nhr"/>
+                        <outlet property="I7TopImage" destination="tUa-Qb-23d" id="6nZ-dI-kAh"/>
+                        <outlet property="I8BottomImage" destination="eDR-Ng-x9H" id="ncB-sO-9Kl"/>
+                        <outlet property="I8LeftImage" destination="YdA-Iq-zH5" id="vcY-DQ-BHB"/>
+                        <outlet property="I8TopImage" destination="aOT-ZQ-Qg5" id="L58-H6-qJx"/>
+                        <outlet property="I9BottomImage" destination="d4G-g0-hIR" id="cmv-99-FUI"/>
+                        <outlet property="I9RightImage" destination="Xxw-hg-wzE" id="cPl-Gh-vLc"/>
+                        <outlet property="I9TopImage" destination="Why-0X-phJ" id="5x3-Xk-My8"/>
                         <outlet property="MainScrollView" destination="SEt-RR-IjS" id="76R-H9-9RJ"/>
                         <outlet property="bottomWallImage" destination="8l6-7V-amP" id="Qqw-ec-nD5"/>
                         <outlet property="characterImage" destination="ExV-ig-pWV" id="SOs-8m-go9"/>
