@@ -524,6 +524,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMQ-eO-oFa">
+                                        <rect key="frame" x="154" y="1957" width="15" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -534,12 +539,12 @@
                                 </connections>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUd-HP-u3y">
-                                <rect key="frame" x="0.0" y="780" width="418" height="116"/>
+                                <rect key="frame" x="0.0" y="768" width="418" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yMc-Xb-ar3">
-                                <rect key="frame" x="10" y="820" width="70" height="30"/>
+                                <rect key="frame" x="38" y="808" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -551,7 +556,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kbi-Ny-X8T">
-                                <rect key="frame" x="150" y="820" width="70" height="30"/>
+                                <rect key="frame" x="179" y="808" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -563,7 +568,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wet-VA-7aV">
-                                <rect key="frame" x="80" y="790" width="70" height="30"/>
+                                <rect key="frame" x="109" y="778" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Up">
@@ -574,7 +579,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qay-Hy-tbz">
-                                <rect key="frame" x="80" y="850" width="70" height="30"/>
+                                <rect key="frame" x="109" y="838" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -583,6 +588,17 @@
                                 </state>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="2bZ-kH-kMb" appends="YES" id="DtC-A9-GXP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xq-ss-dd2">
+                                <rect key="frame" x="311" y="808" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Fire">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fireButtonTapped:" destination="iLd-7K-uuA" eventType="touchUpInside" id="MyU-xH-Av6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -689,6 +705,7 @@
                         <outlet property="bouncyBot1Image" destination="qHW-QH-JkI" id="Kzm-Gx-FQa"/>
                         <outlet property="bouncyBot2Image" destination="s3F-Ss-9ph" id="Ees-uF-qFg"/>
                         <outlet property="bouncyBot3Image" destination="d2T-xd-lAA" id="snU-gy-WzH"/>
+                        <outlet property="bullet1Image" destination="PMQ-eO-oFa" id="Knu-ob-0SH"/>
                         <outlet property="characterImage" destination="ExV-ig-pWV" id="SOs-8m-go9"/>
                         <outlet property="leftWallImage" destination="7FK-ez-Ko6" id="m5v-9o-azD"/>
                         <outlet property="rightWallImage" destination="TwL-1I-nrx" id="VAx-ox-2aI"/>

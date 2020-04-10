@@ -145,6 +145,7 @@ class LevelFourController: UIViewController {
     @IBOutlet var bouncyBot3Image: UIImageView!
     
     
+    @IBOutlet var bullet1Image: UIImageView!
     
     
     @IBOutlet var characterImage: UIImageView!
@@ -177,6 +178,28 @@ class LevelFourController: UIViewController {
     
     var timer: Timer?
     
+    var bots: [Bot] = []
+    var bot1 = Bot()
+    var bot2 = Bot()
+    var bot3 = Bot()
+    var bot4 = Bot()
+    var bot5 = Bot()
+    var bot6 = Bot()
+    var bot7 = Bot()
+    var bot8 = Bot()
+    var bot9 = Bot()
+    var bot10 = Bot()
+    var bot11 = Bot()
+    var bot12 = Bot()
+    var bot13 = Bot()
+    var bot14 = Bot()
+    var bot15 = Bot()
+    
+    var bouncyBots: [BouncyBot] = []
+    var bouncyBot1 = BouncyBot()
+    var bouncyBot2 = BouncyBot()
+    var bouncyBot3 = BouncyBot()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -186,6 +209,21 @@ class LevelFourController: UIViewController {
         MainScrollView.bounds.origin.y = CGFloat(1470)
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
+        bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13, bot14, bot15]
+        let botImages = [bot1Image, bot2Image, bot3Image, bot4Image, bot5Image, bot6Image, bot7Image, bot8Image, bot9Image, bot10Image, bot11Image, bot12Image, bot13Image, bot14Image, bot15Image]
+        bouncyBots = [bouncyBot1, bouncyBot2, bouncyBot3]
+        let bouncyBotImages = [bouncyBot1Image, bouncyBot2Image, bouncyBot3Image]
+        for i in 0..<bots.count {
+            bots[i].isInActrion = true
+            bots[i].velocity = 0.2 + (Double.random(in: -0.1..<0.1))
+            bots[i].image = botImages[i]
+        }
+        for i in 0..<bouncyBots.count {
+            bouncyBots[i].isInActrion = true
+            bouncyBots[i].velocity = 0.05 + (Double.random(in: -0.02..<0.02))
+            bouncyBots[i].image = bouncyBotImages[i]
+        }
+        
     }
     
     
@@ -247,8 +285,57 @@ class LevelFourController: UIViewController {
         
         MainScrollView.bounds.origin.x = MainScrollView.bounds.origin.x + CGFloat((characterLocationX - previousCharacterLocationX))
         MainScrollView.bounds.origin.y = MainScrollView.bounds.origin.y + CGFloat((characterLocationY - previousCharacterLocationY))
+        
+        
+        //Bot itteration logic
+        for i in 0..<bots.count {
+            bots[i].image!.center = CGPoint(x: bots[i].image!.center.x + CGFloat(bots[i].velocity), y: bots[i].image!.center.y)
+            if bots[i].image!.frame.intersects(leftWallImage.frame) || bots[i].image!.frame.intersects(rightWallImage.frame) {
+                bots[i].velocity *= -1
+            }
+            if bullet1Image.frame.intersects(bots[i].image!.frame) {
+                bullet1IsInAction = false
+                bots[i].isInActrion = false
+                bots[i].image!.isHidden = true
+            }
+            if characterImage.frame.intersects(bots[i].image!.frame) && bots[i].isInActrion == true {
+                returnToMenu()
+            }
+        }
+        
+        for i in 0..<bouncyBots.count {
+            bouncyBots[i].image!.center = CGPoint(x: bouncyBots[i].image!.center.x + CGFloat(bouncyBots[i].velocity), y: bouncyBots[i].image!.center.y)
+            bouncyBots[i].topRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y, width: bouncyBots[i].image!.frame.width, height: CGFloat(6))
+            bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(7), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(7))
+            if bouncyBots[i].image!.frame.intersects(leftWallImage.frame) || bouncyBots[i].image!.frame.intersects(rightWallImage.frame) {
+                bouncyBots[i].velocity *= -1
+            }
+            if characterImage.frame.intersects(bouncyBots[i].topRect) && bouncyBots[i].isInActrion == true {
+                upVelocityMultiplier = 10
+                downVelocityMultiplier = 0
+            }
+            if characterImage.frame.intersects(bouncyBots[i].bottomRect) && bouncyBots[i].isInActrion == true {
+                returnToMenu()
+            }
+            
+            
+            if leftBorderHitCheck(frame: bullet1Image.frame) == true || rightBorderHitCheck(frame: bullet1Image.frame) == true{
+                bullet1IsInAction = false
+            }
+            
+            
+            if bullet1IsInAction == true {
+                bullet1Image.isHidden = false
+                bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
+                bullet1X = Double(bullet1Image.center.x)
+                bullet1Y = Double(bullet1Image.center.y)
+            } else {
+                bullet1Image.isHidden = true
+            }
+            
+            
+        }
     }
-    
     
     
     
@@ -287,6 +374,25 @@ class LevelFourController: UIViewController {
     
     
     
+    func returnToMenu() {
+        timer!.invalidate()
+        timer = nil
+        let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainMenuController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    func advanceToNextLevel() {
+        timer!.invalidate()
+        timer = nil
+        let storyboard = UIStoryboard(name: "LevelFour", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LevelFourController") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
     
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
@@ -323,5 +429,11 @@ class LevelFourController: UIViewController {
     
     
     
+    @IBAction func fireButtonTapped(_ sender: UIButton) {
+        bullet1IsInAction = true
+        bullet1Y = Double(characterImage.center.y)
+        bullet1X = Double(characterImage.center.x) + (bulletVelocity * Double(bullet1Direction))
+        bullet1Image.center = CGPoint(x: bullet1X + (bulletVelocity * Double(bullet1Direction)), y: bullet1Y)
+    }
     
 }
