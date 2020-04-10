@@ -124,10 +124,25 @@ class LevelFourController: UIViewController {
     @IBOutlet var I26LeftImage: UIImageView!
     
     
+    @IBOutlet var bot1Image: UIImageView!
+    @IBOutlet var bot2Image: UIImageView!
+    @IBOutlet var bot3Image: UIImageView!
+    @IBOutlet var bot4Image: UIImageView!
+    @IBOutlet var bot5Image: UIImageView!
+    @IBOutlet var bot6Image: UIImageView!
+    @IBOutlet var bot7Image: UIImageView!
+    @IBOutlet var bot8Image: UIImageView!
+    @IBOutlet var bot9Image: UIImageView!
+    @IBOutlet var bot10Image: UIImageView!
+    @IBOutlet var bot11Image: UIImageView!
+    @IBOutlet var bot12Image: UIImageView!
+    @IBOutlet var bot13Image: UIImageView!
+    @IBOutlet var bot14Image: UIImageView!
+    @IBOutlet var bot15Image: UIImageView!
     
-    
-    
-    
+    @IBOutlet var bouncyBot1Image: UIImageView!
+    @IBOutlet var bouncyBot2Image: UIImageView!
+    @IBOutlet var bouncyBot3Image: UIImageView!
     
     
     
