@@ -22,6 +22,8 @@
 		5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5284C8BD243635B9008EB575 /* LevelThree.storyboard */; };
 		528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A37A3242E438100B7D642 /* LevelTwo.storyboard */; };
 		528A37A6242E439900B7D642 /* LevelTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A37A5242E439900B7D642 /* LevelTwoController.swift */; };
+		52CDBBBF244DED4500E7C7F7 /* mainCharShootingLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CDBBBD244DED4500E7C7F7 /* mainCharShootingLeft.png */; };
+		52CDBBC0244DED4500E7C7F7 /* mainCharShootingRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CDBBBE244DED4500E7C7F7 /* mainCharShootingRight.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		5284C8BD243635B9008EB575 /* LevelThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelThree.storyboard; sourceTree = "<group>"; };
 		528A37A3242E438100B7D642 /* LevelTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelTwo.storyboard; sourceTree = "<group>"; };
 		528A37A5242E439900B7D642 /* LevelTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoController.swift; sourceTree = "<group>"; };
+		52CDBBBD244DED4500E7C7F7 /* mainCharShootingLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainCharShootingLeft.png; sourceTree = "<group>"; };
+		52CDBBBE244DED4500E7C7F7 /* mainCharShootingRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainCharShootingRight.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				52321F9B2408A06C008E3030 /* Assets.xcassets */,
 				5259ED15242841C900753354 /* ViewControllers */,
 				5259ED14242841BD00753354 /* Storyboards */,
+				52CDBBBC244DEB2500E7C7F7 /* Images */,
 				526B517C243E1E300034C35F /* MyScrollView.swift */,
 				52321F9D2408A06C008E3030 /* LaunchScreen.storyboard */,
 				52321FA02408A06C008E3030 /* Info.plist */,
@@ -108,6 +113,15 @@
 				526B5179243E1BFC0034C35F /* LevelFourController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		52CDBBBC244DEB2500E7C7F7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				52CDBBBD244DED4500E7C7F7 /* mainCharShootingLeft.png */,
+				52CDBBBE244DED4500E7C7F7 /* mainCharShootingRight.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,8 @@
 				526B5178243E1BE70034C35F /* LevelFour.storyboard in Resources */,
 				52321F9C2408A06C008E3030 /* Assets.xcassets in Resources */,
 				5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */,
+				52CDBBBF244DED4500E7C7F7 /* mainCharShootingLeft.png in Resources */,
+				52CDBBC0244DED4500E7C7F7 /* mainCharShootingRight.png in Resources */,
 				52321F9A2408A06B008E3030 /* LevelOne.storyboard in Resources */,
 				5259ED192428423900753354 /* MainMenu.storyboard in Resources */,
 				528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */,
