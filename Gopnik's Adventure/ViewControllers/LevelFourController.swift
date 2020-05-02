@@ -354,7 +354,7 @@ class LevelFourController: UIViewController {
     
     //right border hit
     func rightBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(rightWallImage.frame) || frame.intersects(I2LeftImage.frame) || frame.intersects(I4LeftImage.frame) || frame.intersects(I6LeftImage.frame) || frame.intersects(I8LeftImage.frame) || frame.intersects(I10LeftImage.frame) || frame.intersects(I12LeftImage.frame) || frame.intersects(I13LeftImage.frame) || frame.intersects(I15LeftImage.frame) || frame.intersects(I17LeftImage.frame) || frame.intersects(I19LeftImage.frame) || frame.intersects(I21LeftImage.frame) || frame.intersects(I23LeftImage.frame) || frame.intersects(I24LeftImage.frame) || frame.intersects(I26LeftImage.frame)) {
+        if (frame.intersects(rightWallImage.frame) || frame.intersects(I2LeftImage.frame) || frame.intersects(I4LeftImage.frame) || frame.intersects(I6LeftImage.frame) || frame.intersects(I8LeftImage.frame) || frame.intersects(I10LeftImage.frame) || frame.intersects(I12LeftImage.frame) || frame.intersects(I13LeftImage.frame) || frame.intersects(I15LeftImage.frame) || frame.intersects(I17LeftImage.frame) || frame.intersects(I19LeftImage.frame) || frame.intersects(I21LeftImage.frame) || frame.intersects(I23LeftImage.frame)) {
             return true
         } else {
             return false
@@ -362,7 +362,7 @@ class LevelFourController: UIViewController {
     }
     //left border hit
     func leftBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(leftWallImage.frame) || frame.intersects(I25RightImage.frame) || frame.intersects(I22RightImage.frame) || frame.intersects(I20RightImage.frame) || frame.intersects(I18RightImage.frame) || frame.intersects(I16RightImage.frame) || frame.intersects(I14RightImage.frame) || frame.intersects(I9RightImage.frame) || frame.intersects(I7RightImage.frame) || frame.intersects(I5RightImage.frame) || frame.intersects(I3RightImage.frame) || frame.intersects(I1RightImage.frame) || frame.intersects(I11RightImage.frame)) {
+        if (frame.intersects(leftWallImage.frame) || frame.intersects(I22RightImage.frame) || frame.intersects(I20RightImage.frame) || frame.intersects(I18RightImage.frame) || frame.intersects(I16RightImage.frame) || frame.intersects(I14RightImage.frame) || frame.intersects(I9RightImage.frame) || frame.intersects(I7RightImage.frame) || frame.intersects(I5RightImage.frame) || frame.intersects(I3RightImage.frame) || frame.intersects(I1RightImage.frame) || frame.intersects(I11RightImage.frame)) {
             return true
         } else {
             return false
@@ -370,7 +370,7 @@ class LevelFourController: UIViewController {
     }
     //top border hit
     func topBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame) || frame.intersects(I22TopImage.frame) || frame.intersects(I23TopImage.frame) || ) {
+        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame) || frame.intersects(I22TopImage.frame) || frame.intersects(I23TopImage.frame)) {
             return true
         } else {
             return false
