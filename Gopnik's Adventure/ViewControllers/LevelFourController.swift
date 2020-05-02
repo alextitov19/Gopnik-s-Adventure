@@ -110,18 +110,7 @@ class LevelFourController: UIViewController {
     @IBOutlet var I23TopImage: UIImageView!
     @IBOutlet var I23BottomImage: UIImageView!
     @IBOutlet var I23LeftImage: UIImageView!
-    
-    @IBOutlet var I24TopImage: UIImageView!
-    @IBOutlet var I24BottomImage: UIImageView!
-    @IBOutlet var I24LeftImage: UIImageView!
-    
-    @IBOutlet var I25TopImage: UIImageView!
-    @IBOutlet var I25BottomImage: UIImageView!
-    @IBOutlet var I25RightImage: UIImageView!
-    
-    @IBOutlet var I26TopImage: UIImageView!
-    @IBOutlet var I26BottomImage: UIImageView!
-    @IBOutlet var I26LeftImage: UIImageView!
+
     
     
     @IBOutlet var bot1Image: UIImageView!
@@ -381,7 +370,7 @@ class LevelFourController: UIViewController {
     }
     //top border hit
     func topBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame) || frame.intersects(I22TopImage.frame) || frame.intersects(I23TopImage.frame) || frame.intersects(I24TopImage.frame) || frame.intersects(I25TopImage.frame) || frame.intersects(I26TopImage.frame)) {
+        if (frame.intersects(bottomWallImage.frame) || frame.intersects(I1TopImage.frame) || frame.intersects(I2TopImage.frame) || frame.intersects(I3TopImage.frame) || frame.intersects(I4TopImage.frame) || frame.intersects(I5TopImage.frame) || frame.intersects(I6TopImage.frame) || frame.intersects(I7TopImage.frame) || frame.intersects(I8TopImage.frame) || frame.intersects(I9TopImage.frame) || frame.intersects(I10TopImage.frame) || frame.intersects(I11TopImage.frame) || frame.intersects(I12TopImage.frame) || frame.intersects(I13TopImage.frame) || frame.intersects(I14TopImage.frame) || frame.intersects(I15TopImage.frame) || frame.intersects(I16TopImage.frame) || frame.intersects(I17TopImage.frame) || frame.intersects(I18TopImage.frame) || frame.intersects(I19TopImage.frame) || frame.intersects(I20TopImage.frame) || frame.intersects(I21TopImage.frame) || frame.intersects(I22TopImage.frame) || frame.intersects(I23TopImage.frame) || ) {
             return true
         } else {
             return false
@@ -389,7 +378,7 @@ class LevelFourController: UIViewController {
     }
     //bottom border hit
     func bottomBorderHitCheck(frame :CGRect) -> Bool {
-        if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame) || frame.intersects(I17BottomImage.frame) || frame.intersects(I18BottomImage.frame) || frame.intersects(I19BottomImage.frame) || frame.intersects(I20BottomImage.frame) || frame.intersects(I21BottomImage.frame) || frame.intersects(I22BottomImage.frame) || frame.intersects(I23BottomImage.frame) || frame.intersects(I24BottomImage.frame) || frame.intersects(I25BottomImage.frame) || frame.intersects(I26BottomImage.frame)) {
+        if (frame.intersects(topWallImage.frame) || frame.intersects(I1BottomImage.frame) || frame.intersects(I2BottomImage.frame) || frame.intersects(I3BottomImage.frame) || frame.intersects(I4BottomImage.frame) || frame.intersects(I5BottomImage.frame) || frame.intersects(I6BottomImage.frame) || frame.intersects(I7BottomImage.frame) || frame.intersects(I8BottomImage.frame) || frame.intersects(I9BottomImage.frame) || frame.intersects(I10BottomImage.frame) || frame.intersects(I11BottomImage.frame) || frame.intersects(I12BottomImage.frame) || frame.intersects(I13BottomImage.frame) || frame.intersects(I14BottomImage.frame) || frame.intersects(I15BottomImage.frame) || frame.intersects(I16BottomImage.frame) || frame.intersects(I17BottomImage.frame) || frame.intersects(I18BottomImage.frame) || frame.intersects(I19BottomImage.frame) || frame.intersects(I20BottomImage.frame) || frame.intersects(I21BottomImage.frame) || frame.intersects(I22BottomImage.frame) || frame.intersects(I23BottomImage.frame)) {
             return true
         } else {
             return false
