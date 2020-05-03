@@ -291,6 +291,11 @@ class LevelFourController: UIViewController {
             bots[i].image!.center = CGPoint(x: bots[i].image!.center.x + CGFloat(bots[i].velocity), y: bots[i].image!.center.y)
             if bots[i].image!.frame.intersects(leftWallImage.frame) || bots[i].image!.frame.intersects(rightWallImage.frame) {
                 bots[i].velocity *= -1
+                if(bots[i].velocity < 0) {
+                    bots[i].image?.image = UIImage(named: "ghostLookingLeft.png")!
+                } else {
+                    bots[i].image?.image = UIImage(named: "ghostLookingRight.png")!
+                }
             }
             if bullet1Image.frame.intersects(bots[i].image!.frame) {
                 bullet1IsInAction = false
@@ -308,6 +313,11 @@ class LevelFourController: UIViewController {
             bouncyBots[i].bottomRect = CGRect.init(x: bouncyBots[i].image!.frame.origin.x, y: bouncyBots[i].image!.frame.origin.y + CGFloat(21), width: bouncyBots[i].image!.frame.width, height: bouncyBots[i].image!.frame.height - CGFloat(21))
             if bouncyBots[i].image!.frame.intersects(leftWallImage.frame) || bouncyBots[i].image!.frame.intersects(rightWallImage.frame) {
                 bouncyBots[i].velocity *= -1
+                if(bouncyBots[i].velocity < 0) {
+                    bouncyBots[i].image?.image = UIImage(named: "bouncyBotLookingLeft.png")!
+                } else {
+                    bouncyBots[i].image?.image = UIImage(named: "bouncyBotLookingRight.png")!
+                }
             }
             if characterImage.frame.intersects(bouncyBots[i].topRect) && bouncyBots[i].isInActrion == true {
                 upVelocityMultiplier = 14
@@ -411,6 +421,7 @@ class LevelFourController: UIViewController {
     
     @IBAction func leftLongPress(_ sender: UILongPressGestureRecognizer) {
         bullet1Direction = -1
+        characterImage.image = UIImage(named: "mainCharShootingLeft.png")
         if sender.state != .ended {
             leftTouchesEnded = false
         } else {
@@ -429,6 +440,8 @@ class LevelFourController: UIViewController {
     
     @IBAction func rightLongPress(_ sender: UILongPressGestureRecognizer) {
         bullet1Direction = 1
+        characterImage.image = UIImage(named: "mainCharShootingRight.png")
+
         if sender.state != .ended {
             rightTouchesEnded = false
         } else {
