@@ -18,6 +18,13 @@
 		526B5178243E1BE70034C35F /* LevelFour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526B5177243E1BE70034C35F /* LevelFour.storyboard */; };
 		526B517A243E1BFC0034C35F /* LevelFourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B5179243E1BFC0034C35F /* LevelFourController.swift */; };
 		526B517D243E1E300034C35F /* MyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B517C243E1E300034C35F /* MyScrollView.swift */; };
+		52818684245E5132000E9FD6 /* turret.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818683245E5132000E9FD6 /* turret.png */; };
+		52818689245E5154000E9FD6 /* ghostLookingLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818685245E5154000E9FD6 /* ghostLookingLeft.png */; };
+		5281868A245E5154000E9FD6 /* fireball.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818686245E5154000E9FD6 /* fireball.png */; };
+		5281868B245E5154000E9FD6 /* ghostLookingRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818687245E5154000E9FD6 /* ghostLookingRight.png */; };
+		5281868C245E5154000E9FD6 /* level4background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818688245E5154000E9FD6 /* level4background.png */; };
+		5281868F245E515F000E9FD6 /* bouncyBotLookingRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5281868D245E515F000E9FD6 /* bouncyBotLookingRight.png */; };
+		52818690245E515F000E9FD6 /* bouncyBotLookingLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 5281868E245E515F000E9FD6 /* bouncyBotLookingLeft.png */; };
 		5284C8BC243635A8008EB575 /* LevelThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C8BB243635A8008EB575 /* LevelThreeController.swift */; };
 		5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5284C8BD243635B9008EB575 /* LevelThree.storyboard */; };
 		528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A37A3242E438100B7D642 /* LevelTwo.storyboard */; };
@@ -40,6 +47,13 @@
 		526B5177243E1BE70034C35F /* LevelFour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelFour.storyboard; sourceTree = "<group>"; };
 		526B5179243E1BFC0034C35F /* LevelFourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourController.swift; sourceTree = "<group>"; };
 		526B517C243E1E300034C35F /* MyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollView.swift; sourceTree = "<group>"; };
+		52818683245E5132000E9FD6 /* turret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turret.png; sourceTree = "<group>"; };
+		52818685245E5154000E9FD6 /* ghostLookingLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghostLookingLeft.png; sourceTree = "<group>"; };
+		52818686245E5154000E9FD6 /* fireball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireball.png; sourceTree = "<group>"; };
+		52818687245E5154000E9FD6 /* ghostLookingRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghostLookingRight.png; sourceTree = "<group>"; };
+		52818688245E5154000E9FD6 /* level4background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4background.png; sourceTree = "<group>"; };
+		5281868D245E515F000E9FD6 /* bouncyBotLookingRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouncyBotLookingRight.png; sourceTree = "<group>"; };
+		5281868E245E515F000E9FD6 /* bouncyBotLookingLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bouncyBotLookingLeft.png; sourceTree = "<group>"; };
 		5284C8BB243635A8008EB575 /* LevelThreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeController.swift; sourceTree = "<group>"; };
 		5284C8BD243635B9008EB575 /* LevelThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelThree.storyboard; sourceTree = "<group>"; };
 		528A37A3242E438100B7D642 /* LevelTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LevelTwo.storyboard; sourceTree = "<group>"; };
@@ -118,6 +132,13 @@
 		52CDBBBC244DEB2500E7C7F7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5281868E245E515F000E9FD6 /* bouncyBotLookingLeft.png */,
+				5281868D245E515F000E9FD6 /* bouncyBotLookingRight.png */,
+				52818686245E5154000E9FD6 /* fireball.png */,
+				52818685245E5154000E9FD6 /* ghostLookingLeft.png */,
+				52818687245E5154000E9FD6 /* ghostLookingRight.png */,
+				52818688245E5154000E9FD6 /* level4background.png */,
+				52818683245E5132000E9FD6 /* turret.png */,
 				52CDBBBD244DED4500E7C7F7 /* mainCharShootingLeft.png */,
 				52CDBBBE244DED4500E7C7F7 /* mainCharShootingRight.png */,
 			);
@@ -183,13 +204,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				52321F9F2408A06C008E3030 /* LaunchScreen.storyboard in Resources */,
+				5281868F245E515F000E9FD6 /* bouncyBotLookingRight.png in Resources */,
+				52818684245E5132000E9FD6 /* turret.png in Resources */,
 				526B5178243E1BE70034C35F /* LevelFour.storyboard in Resources */,
+				5281868C245E5154000E9FD6 /* level4background.png in Resources */,
 				52321F9C2408A06C008E3030 /* Assets.xcassets in Resources */,
+				5281868A245E5154000E9FD6 /* fireball.png in Resources */,
 				5284C8BE243635B9008EB575 /* LevelThree.storyboard in Resources */,
+				52818689245E5154000E9FD6 /* ghostLookingLeft.png in Resources */,
 				52CDBBBF244DED4500E7C7F7 /* mainCharShootingLeft.png in Resources */,
 				52CDBBC0244DED4500E7C7F7 /* mainCharShootingRight.png in Resources */,
+				5281868B245E5154000E9FD6 /* ghostLookingRight.png in Resources */,
 				52321F9A2408A06B008E3030 /* LevelOne.storyboard in Resources */,
 				5259ED192428423900753354 /* MainMenu.storyboard in Resources */,
+				52818690245E515F000E9FD6 /* bouncyBotLookingLeft.png in Resources */,
 				528A37A4242E438100B7D642 /* LevelTwo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

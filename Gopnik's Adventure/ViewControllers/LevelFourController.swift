@@ -126,8 +126,6 @@ class LevelFourController: UIViewController {
     @IBOutlet var bot11Image: UIImageView!
     @IBOutlet var bot12Image: UIImageView!
     @IBOutlet var bot13Image: UIImageView!
-    @IBOutlet var bot14Image: UIImageView!
-    @IBOutlet var bot15Image: UIImageView!
     
     @IBOutlet var bouncyBot1Image: UIImageView!
     @IBOutlet var bouncyBot2Image: UIImageView!
@@ -187,8 +185,6 @@ class LevelFourController: UIViewController {
     var bot11 = Bot()
     var bot12 = Bot()
     var bot13 = Bot()
-    var bot14 = Bot()
-    var bot15 = Bot()
     
     var bouncyBots: [BouncyBot] = []
     var bouncyBot1 = BouncyBot()
@@ -210,8 +206,8 @@ class LevelFourController: UIViewController {
         MainScrollView.bounds.origin.y = CGFloat(1470)
         characterLocationX = Double(characterImage.center.x)
         characterLocationY = Double(characterImage.center.y)
-        bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13, bot14, bot15]
-        let botImages = [bot1Image, bot2Image, bot3Image, bot4Image, bot5Image, bot6Image, bot7Image, bot8Image, bot9Image, bot10Image, bot11Image, bot12Image, bot13Image, bot14Image, bot15Image]
+        bots = [bot1, bot2, bot3, bot4, bot5, bot6, bot7, bot8, bot9, bot10, bot11, bot12, bot13]
+        let botImages = [bot1Image, bot2Image, bot3Image, bot4Image, bot5Image, bot6Image, bot7Image, bot8Image, bot9Image, bot10Image, bot11Image, bot12Image, bot13Image]
         bouncyBots = [bouncyBot1, bouncyBot2, bouncyBot3]
         let bouncyBotImages = [bouncyBot1Image, bouncyBot2Image, bouncyBot3Image]
         for i in 0..<bots.count {
