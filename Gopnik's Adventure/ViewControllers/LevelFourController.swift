@@ -415,7 +415,7 @@ class LevelFourController: UIViewController {
     
     
     @IBAction func upButtonTapped(_ sender: UIButton) {
-        upVelocityMultiplier = 7.2
+        upVelocityMultiplier = 10
     }
     
     
