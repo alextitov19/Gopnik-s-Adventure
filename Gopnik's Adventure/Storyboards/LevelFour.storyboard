@@ -12,7 +12,7 @@
             <objects>
                 <viewController storyboardIdentifier="LevelFourController" id="iLd-7K-uuA" customClass="LevelFourController" customModule="Gopnik_s_Adventure" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UEf-iF-cHe">
-                        <rect key="frame" x="0.0" y="0.0" width="2000" height="5000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-RR-IjS" customClass="MyScrollView" customModule="Gopnik_s_Adventure" customModuleProvider="target">
